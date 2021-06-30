@@ -95,10 +95,9 @@ h1 {
   <button class="btn" onclick="filterSelection('survey')"> SURVEY</button>
   <button class="btn" onclick="filterSelection('ucdp')"> UCDP</button>
   <button class="btn" onclick="filterSelection('pax')"> PA-X</button>
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-  <label class="form-check-label" for="flexCheckDefault">
-    Downloadable
-  </label>
+  <div class="checkbox">
+      <label><input type="checkbox" rel="downloadable" onchange="change()"/>Downloadable</label>
+   </div>
 </div>
 
 <!-- Portfolio Gallery Grid -->
@@ -373,7 +372,28 @@ function w3RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-
+function change(){
+    var checkboxes = document.getElementsByClassName('checkbox');
+    var chekboxInputs = Array.from(checkboxes).map(a => a.querySelector('input'));
+    var allAreUnselected = chekboxInputs.every(function(elem){
+       return !elem.checked;
+    });
+    if(allAreUnselected){
+       chekboxInputs.forEach(function(input){
+          Array.from(document.querySelectorAll("." + input.getAttribute("rel"))).forEach(function(item){
+              item.style.display = 'block';
+          });
+       });
+    }
+    else {
+      chekboxInputs.forEach(function(input){
+          Array.from(document.querySelectorAll("." + input.getAttribute("rel"))).forEach(function(item){
+            item.style.display = input.checked ? 'block' : 'none';
+          });
+       });
+    }
+}
+change();
 
 // Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
