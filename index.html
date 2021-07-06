@@ -578,7 +578,7 @@ for (const filter of filters) {
     for (const image of images) {
       image.classList[selectedFilters.some(filter => image.classList.contains(filter))
         ? 'add'
-        : 'remove']('visible');
+        : 'remove']('show');
     }
   })
 }
