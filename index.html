@@ -77,9 +77,6 @@ h1 {
   color: white;
 }
 
-.landClass, .absClass {
-    display: none;
-}
 
 </style>
 </head>
@@ -106,17 +103,25 @@ h1 {
       <label><input type="checkbox" rel="downloadable" onchange="change()"/>Downloadable</label>
    </div>
 </div>
-
-Filter: <br/>
-<select>
-<option value="abstract" /> Abstract<br />
-<option value="landscape" /> Landscape<br />
+<div class="filter">
+  <select id="category1">
+    <option value="">category</option>
+    <option value="ucdp">people</option>
+    <option value="pred">nature</option>
+    <option value="prio">landscapes</option>
+  </select>
+  <select id="category2">
+  <option value="">category</option>
+  <option value="pred">people</option>
+  <option value="ucdp">nature</option>
+  <option value="pax">landscapes</option>
 </select>
+</div>
 
 
 <!-- Portfolio Gallery Grid -->
 <div class="row">
-  <div class="abstract column acled">
+  <div class="column acled">
     <div class="content">
       <img src="/vis_images/ccaps.png" alt="ACLED" style="width:100%">
       <h4>Climate Change and African Political Stability (CCAPS) Conflict Dashboard</h4>
@@ -124,7 +129,7 @@ Filter: <br/>
       <a href="http://strauss.tacc.utexas.edu/ccaps/dashboards/show/1675973">Link</a>
     </div>
   </div>
-  <div class="abstract column acled">
+  <div class="column acled">
     <div class="content">
       <img src="/vis_images/acled_arc.png" alt="ACLED / ArcGIS" style="width:100%">
       <h4> Armed Conflict Location & Event Data Project (ACLED) (ArcGis)</h4>
@@ -529,7 +534,6 @@ Filter: <br/>
 <!-- END MAIN -->
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
 filterSelection("all")
 function filterSelection(c) {
@@ -563,10 +567,21 @@ function w3RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-$("select").change(function(){
-    $("img").hide();
-    $("." + $(this).val()).show();
-    });
+let selectedFilters = [];
+const images = [...document.querySelectorAll('.column')];
+const filters = [...document.querySelectorAll('.filter select')];
+
+for (const filter of filters) {
+  filter.addEventListener('change', function(event) {
+    selectedFilters = filters.map(filter => filter.value).filter(Boolean);
+    console.log(selectedFilters);
+    for (const image of images) {
+      image.classList[selectedFilters.some(filter => image.classList.contains(filter))
+        ? 'add'
+        : 'remove']('visible');
+    }
+  })
+}
 
 // Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
