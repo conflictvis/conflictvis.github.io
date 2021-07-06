@@ -76,6 +76,11 @@ h1 {
   background-color: #666;
   color: white;
 }
+
+.landClass, .absClass {
+    display: none;
+}
+
 </style>
 </head>
 <body>
@@ -102,9 +107,16 @@ h1 {
    </div>
 </div>
 
+Filter: <br/>
+<select>
+<option value="abstract" /> Abstract<br />
+<option value="landscape" /> Landscape<br />
+</select>
+
+
 <!-- Portfolio Gallery Grid -->
 <div class="row">
-  <div class="column acled">
+  <div class="abstract column acled">
     <div class="content">
       <img src="/vis_images/ccaps.png" alt="ACLED" style="width:100%">
       <h4>Climate Change and African Political Stability (CCAPS) Conflict Dashboard</h4>
@@ -112,7 +124,7 @@ h1 {
       <a href="http://strauss.tacc.utexas.edu/ccaps/dashboards/show/1675973">Link</a>
     </div>
   </div>
-  <div class="column acled">
+  <div class="abstract column acled">
     <div class="content">
       <img src="/vis_images/acled_arc.png" alt="ACLED / ArcGIS" style="width:100%">
       <h4> Armed Conflict Location & Event Data Project (ACLED) (ArcGis)</h4>
@@ -517,6 +529,7 @@ h1 {
 <!-- END MAIN -->
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
 filterSelection("all")
 function filterSelection(c) {
@@ -550,28 +563,10 @@ function w3RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-function change(){
-    var checkboxes = document.getElementsByClassName('checkbox');
-    var chekboxInputs = Array.from(checkboxes).map(a => a.querySelector('input'));
-    var allAreUnselected = chekboxInputs.every(function(elem){
-       return !elem.checked;
+$("select").change(function(){
+    $("img").hide();
+    $("." + $(this).val()).show();
     });
-    if(allAreUnselected){
-       chekboxInputs.forEach(function(input){
-          Array.from(document.querySelectorAll("." + input.getAttribute("rel"))).forEach(function(item){
-              item.style.display = 'block';
-          });
-       });
-    }
-    else {
-      chekboxInputs.forEach(function(input){
-          Array.from(document.querySelectorAll("." + input.getAttribute("rel"))).forEach(function(item){
-            item.style.display = input.checked ? 'block' : 'none';
-          });
-       });
-    }
-}
-change();
 
 // Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
@@ -584,6 +579,5 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script>
-
 </body>
 </html>
