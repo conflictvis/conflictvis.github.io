@@ -1,4 +1,4 @@
-const url = "web_vis2.csv";
+const url = "web_vis3.csv";
 
 const taxonomy = {
 	geography_representation: ["mapped", "distorted", "abstract"],
