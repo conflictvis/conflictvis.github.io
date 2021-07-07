@@ -96,7 +96,6 @@ h1 {
   <button class="btn" onclick="filterSelection('gpi')"> GPI</button>
   <button class="btn" onclick="filterSelection('survey')"> SURVEY</button>
   <button class="btn" onclick="filterSelection('ucdp')"> UCDP</button>
-  <button class="btn" onclick="filterSelection('pred')"> PREDICTIVE</button>
   <button class="btn" onclick="filterSelection('pax')"> PA-X</button>
   <button class="btn" onclick="filterSelection('other')"> OTHER</button>
   <div class="checkbox">
@@ -110,6 +109,7 @@ h1 {
     <option value="ngo">NGOs</option>
     <option value="university">University</option>
     <option value="gov">Government</option>
+    <option value="pri">Private Sector</option>
   </select>
   <select id="category2">
   <option value="">Domain</option>
@@ -118,13 +118,14 @@ h1 {
   <option value="minority">Minority Groups</option>
   <option value="climate">Climate</option>
   <option value="refugee">Refugee</option>
+  <option value="pred">Prediction</option>
 </select>
 </div>
 
 
 <!-- Portfolio Gallery Grid -->
 <div class="row">
-  <div class="column acled">
+  <div class="column acled university">
     <div class="content">
       <img src="/vis_images/ccaps.png" alt="ACLED" style="width:100%">
       <h4>Climate Change and African Political Stability (CCAPS) Conflict Dashboard</h4>
@@ -132,7 +133,7 @@ h1 {
       <a href="http://strauss.tacc.utexas.edu/ccaps/dashboards/show/1675973">Link</a>
     </div>
   </div>
-  <div class="column acled">
+  <div class="column acled pri">
     <div class="content">
       <img src="/vis_images/acled_arc.png" alt="ACLED / ArcGIS" style="width:100%">
       <h4> Armed Conflict Location & Event Data Project (ACLED) (ArcGis)</h4>
@@ -140,7 +141,7 @@ h1 {
       <a href="https://www.arcgis.com/apps/mapviewer/index.html?layers=a6e330c275dd421a9a3dda6e8e546f3d">Link</a>
     </div>
   </div>
-  <div class="column acled">
+  <div class="column acled ngo">
     <div class="content">
       <img src="/vis_images/conflicts2watch.png" alt="ACLED" style="width:100%">
       <h4>10 Conflicts to Watch</h4>
@@ -148,11 +149,11 @@ h1 {
       <a href="https://melissapavlik.github.io/scrollytelling/">Link</a>
     </div>
   </div>
-  <div class="column acled">
+  <div class="column acled gov">
     <div class="content">
       <img src="/vis_images/humafrica.png" alt="ACLED" style="width:100%">
       <h4>Humanitarian Incidents in Africa Dashboard</h4>
-      <p>OSAC</p>
+      <p>Overseas Security Advisory Council (OSAC)</p>
       <a href="https://dsosac.maps.arcgis.com/apps/opsdashboard/index.html#/96016d5d2edc4670abf38341db6a0077">Link</a>
     </div>
   </div>
@@ -172,7 +173,7 @@ h1 {
       <a href="https://acleddata.com/dashboard/#/dashboard">Link</a>
     </div>
   </div>
-   <div class="column pred">
+   <div class="column other university pred">
     <div class="content">
       <img src="/vis_images/early_warning.png" alt="Early Warning Project" style="width:100%">
       <h4>Early Warning Project</h4>
@@ -188,7 +189,7 @@ h1 {
       <a href="https://acleddata.com/acled-religion-dashboard/">Link</a>
     </div>
   </div>
-   <div class="column acled">
+   <div class="column acled ngo peace">
     <div class="content">
       <img src="/vis_images/epo.png" alt="Ethiopia ACLED Data" style="width:100%">
       <h4>Ethiopia Peace Observatory Dashboard</h4>
@@ -196,7 +197,7 @@ h1 {
       <a href="https://epo.acleddata.com/dashboard/">Link</a>
     </div>
   </div>
-  <div class="column acled ngo">
+  <div class="column acled ngo pred">
     <div class="content">
       <img src="/vis_images/acled_pulse.png" alt="ACLED" style="width:100%">
       <h4>Conflict Pulse</h4>
@@ -236,7 +237,7 @@ h1 {
       <a href="https://www.humanitarianresponse.info/en/operations/afghanistan/idps">Link</a>
     </div>
   </div>
-  <div class="column media">
+  <div class="column media media2">
     <div class="content">
       <img src="/vis_images/worldsconflicts.png" alt="The World's Conflicts" style="width:100%">
       <h4> The World's Conflicts </h4>
@@ -252,7 +253,7 @@ h1 {
       <a href="https://journals.sagepub.com/doi/10.1177/0022343316630037">Link</a>
     </div>
   </div>
-  <div class="column pax university">
+  <div class="column pax university peace">
     <div class="content">
       <img src="/vis_images/viz_peace.png" alt="Peace Visualization" style="width:100%">
       <h4>Visualizing Peace -- The Yemen Conflict</h4>
@@ -324,7 +325,7 @@ h1 {
       <a href="https://gappoll.unglobalpulse.net/ghana/">Link</a>
     </div>
   </div>
-  <div class="column survey">
+  <div class="column survey university peace">
     <div class="content">
       <img src="/vis_images/peacetech.png" alt="Peace Tech" style="width:100%">
       <h4>Peace Tech</h4>
@@ -332,7 +333,7 @@ h1 {
       <a href="http://sustainingpeaceproject.com/peace-tech/visualizing-sustainable-peace">Link</a>
     </div>
   </div>
-   <div class="column survey">
+   <div class="column survey gov">
     <div class="content">
       <img src="/vis_images/conflictstab_monitoring.png" alt="Conflict and Stabilization Monitoring Framework" style="width:100%">
       <h4>Conflict and Stabilization Monitoring Framework</h4>
@@ -340,7 +341,7 @@ h1 {
       <a href="https://www.usip.org/programs/conflict-and-stabilization-monitoring-framework">Link</a>
     </div>
   </div>
-  <div class="column survey">
+  <div class="column survey ngo">
     <div class="content">
       <img src="/vis_images/globalconflict_tracker.png" alt="Global Conflict Tracker" style="width:100%">
       <h4>Global Conflict Tracker</h4>
@@ -356,15 +357,7 @@ h1 {
       <a href="https://refugees.unglobalpulse.net/#new_tab">Link</a>
     </div>
   </div>
-   <div class="column media">
-    <div class="content">
-      <img src="/vis_images/conflict_mapping.png" alt="Conflict Mapping" style="width:100%">
-      <h4>Conflict Mapping Infographic Series</h4>
-      <p> Patil Tchilinguirian </p>
-      <a href="http://www.patchil.com/portfolio/lebanons-conflict-mapping-infographic-series/">Link</a>
-    </div>
-  </div>
-  <div class="column ucdp">
+  <div class="column ucdp pri">
     <div class="content">
       <img src="/vis_images/armed_conflict.png" alt="World Conflict Statistics" style="width:100%">
       <h4>World Armed Conflict Statistics</h4>
@@ -372,7 +365,7 @@ h1 {
       <a href="https://knoema.com/infographics/zzzvrud/world-armed-conflicts-statistics">Link</a>
     </div>
   </div>
-  <div class="column other refugee">
+  <div class="column other gov refugee">
     <div class="content">
       <img src="/vis_images/refugee_worldbank.png" alt="Refugee Population by country or territory of asylum" style="width:100%">
       <h4>Refugee Population</h4>
@@ -380,7 +373,7 @@ h1 {
       <a href="https://data.worldbank.org/indicator/SM.POP.REFG?end=2014&start=1990">Link</a>
     </div>
   </div>
-  <div class="column survey">
+  <div class="column survey university peace">
     <div class="content">
       <img src="/vis_images/peacemath.png" alt="PeaceMath Model" style="width:100%">
       <h4>PeaceMath Model</h4>
@@ -388,7 +381,7 @@ h1 {
       <a href="http://sustainingpeaceproject.com/peace-tech/mathematical-model">Link</a>
     </div>
   </div>
-  <div class="column other media climate">
+  <div class="column other pri climate">
     <div class="content">
       <img src="/vis_images/climate_diplomacy.png" alt="Environment, Conflict, & Cooperation Factbook (ECC Factbook)" style="width:100%">
       <h4>Environment, Conflict, & Cooperation Factbook (ECC Factbook)</h4>
@@ -396,7 +389,7 @@ h1 {
       <a href="https://climate-diplomacy.org/case-studies?term=&filter[geolocation][center]=19.093367869342984,13.110084862355&widget[map][zoom]=3">Link</a>
     </div>
   </div>
-  <div class="column other">
+  <div class="column other pri">
     <div class="content">
       <img src="/vis_images/blackrock.png" alt="Geopolitical risk dashboard" style="width:100%">
       <h4>Geopolitical risk dashboard</h4>
@@ -412,7 +405,7 @@ h1 {
       <a href="https://gain.nd.edu/our-work/country-index/">Link</a>
     </div>
   </div>
-    <div class="column acled">
+    <div class="column acled university">
     <div class="content">
       <img src="/vis_images/conflict_actordist.png" alt="Conflict Actor Distribution" style="width:100%">
       <h4>Urban Mapping and Visualization</h4>
@@ -428,7 +421,7 @@ h1 {
       <a href="https://conflictplatform.ox.ac.uk/cccp/research/conflict-in-the-horn-of-africa">Link</a>
     </div>
   </div>
-  <div class="column other">
+  <div class="column other ngo">
     <div class="content">
       <img src="/vis_images/start_fund.png" alt="START FUND Alerts Dashboard" style="width:100%">
       <h4>START FUND Alerts Dashboard</h4>
@@ -436,7 +429,7 @@ h1 {
       <a href="https://startnetwork.org/start-fund/alerts?page=11&field_date_value%5Bmin%5D&field_date_value%5Bmax%5D&field_alert_type_target_id_entityreference_filter=All&field_agencies_funded_target_id_entityreference_filter=All&field_area_value=&order=field_crisis_type&sort=asc">Link</a>
     </div>
   </div>
-  <div class="column other fragility">
+  <div class="column other ngo frag">
     <div class="content">
       <img src="/vis_images/worldfragility.png" alt="Fragility in the World 2021" style="width:100%">
       <h4>Fragility in the World 2021</h4>
@@ -452,15 +445,15 @@ h1 {
       <a href="http://info.worldbank.org/governance/wgi/Home/Reports">Link</a>
     </div>
   </div>
-      <div class="column other fragility">
+      <div class="column other ngo fragility">
     <div class="content">
       <img src="/vis_images/fragile_cities.png" alt="Fragile Cities" style="width:100%">
       <h4>Fragile Cities</h4>
-      <p>Igarape institute, the World Economic Forum, 100 Resiliant Cities</p>
+      <p>Igarape institute, The World Economic Forum, 100 Resiliant Cities</p>
       <a href="http://fragilecities.igarape.org.br">Link</a>
     </div>
   </div>
-  <div class="column other media2 refugee">
+  <div class="column other pri refugee">
     <div class="content">
       <img src="/vis_images/refugee_project.png" alt="The Refugee Project" style="width:100%">
       <h4>The Refugee Project</h4>
@@ -476,7 +469,7 @@ h1 {
       <a href="https://www.flerlagetwins.com/2017/08/600-years-of-armed-conflict_43.html">Link</a>
     </div>
   </div>
-  <div class="column other">
+  <div class="column other ngo">
     <div class="content">
       <img src="/vis_images/crisis_watch.png" alt="CrisisWatch -- Tracking Conflict Worldwide" style="width:100%">
       <h4>CrisisWatch</h4>
@@ -484,7 +477,7 @@ h1 {
       <a href="https://www.crisisgroup.org/crisiswatch">Link</a>
     </div>
   </div>
-  <div class="column other">
+  <div class="column other gov refugee">
     <div class="content">
       <img src="/vis_images/afgan_conflict.png" alt="Internal Displacement due to Conflict" style="width:100%">
       <h4>Afghanistan: Conflict Induced Displacements </h4>
@@ -492,7 +485,7 @@ h1 {
       <a href="https://www.humanitarianresponse.info/en/operations/afghanistan/idps">Link</a>
     </div>
   </div>
-  <div class="column other university">
+  <div class="column other university peace">
     <div class="content">
       <img src="/vis_images/peacebuilding_data.png" alt="Peacebuilding Data -- Liberia Dashboard" style="width:100%">
       <h4>Peacebuilding Data</h4>
@@ -500,7 +493,7 @@ h1 {
       <a href="http://www.peacebuildingdata.org/interactivemaps/liberia#/?indicator=8_3_6">Link</a>
     </div>
   </div>
-  <div class="column other gov">
+  <div class="column other gov minority peace">
     <div class="content">
       <img src="/vis_images/women_security.png" alt="Women and Peace and Security Dashboard" style="width:100%">
       <h4>Women and Peace and Security Dashboard</h4>
@@ -516,7 +509,7 @@ h1 {
       <a href="https://www.stabilityjournal.org/hosted/m23-rebel-support-in-drc/">Link</a>
     </div>
   </div>
-    <div class="column other">
+    <div class="column other university">
     <div class="content">
       <img src="/vis_images/civic_education.png" alt="Wars and Violent Conflict" style="width:100%">
       <h4>Wars and Violent Conflicts</h4>
@@ -524,7 +517,7 @@ h1 {
       <a href="http://warpp.info/en/m1?V=1+15.29+20.04&L=m1-ac-chsol.c">Link</a>
     </div>
   </div>
-  <div class="column other gov">
+  <div class="column other gov minority">
     <div class="content">
       <img src="/vis_images/caac.png" alt="Children and Armed Conflict Dashboard" style="width:100%">
       <h4>Children and Armed Conflict Dashboard</h4>
