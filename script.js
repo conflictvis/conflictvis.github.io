@@ -159,11 +159,11 @@ d3.csv(url)
 		div.append("h2").text((d) => d.Title);
 		div.append("span").html((d) =>
 			[
-				d.Author,
+				d.Title,
 				". <i>",
 				d["Publication Title"],
 				"</i> (",
-				d["Publication Year"],
+				d.Author,
 				")",
 				" <a href=" + d.URL + ' target="_blank">[Link]</a>',
 				"<br>",
