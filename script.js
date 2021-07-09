@@ -3,18 +3,17 @@ const url = "web_vis3.csv";
 const taxonomy = {
 	geography_representation: ["mapped", "distorted", "abstract"],
 	node_representation: ["explicit", "aggregated", "abstract"],
-	link_representation: ["explicit", "aggregated", "abstract"],
-	composition: ["juxtaposed", "superimposed", "nested", "integrated"],
-	interactivity: ["not_required", "required", "interaction_only"],
+	affiliated_org: ["university_research", "gov", "ngo", "private", "media"],
+	level_of_interactivity: ["low", "medium", "high"],
 };
 
 const facets = Object.keys(taxonomy);
 
 const datatypes = [
 	// 1/ Links
-	"directed_links",
-	"undirected_links",
-	"weighted_links",
+	"data_available",
+	"api",
+	"features_map",
 	"additional_link_attributes",
 	// "no_additional_link_attributes",
 	"additional_node_attributes",
@@ -26,11 +25,7 @@ const datatypes = [
 	"dense_networks",
 	"networks_with_varying_density",
 	// 4/ Dynamic
-	"dynamic_networks",
-	// 5/ Uncertainty
-	"uncertain_network_topology",
-	"uncertain_locations",
-	"uncertain_additional_attributes",
+	"dynamic_networks"
 ];
 
 const container = d3.select(".grid");
