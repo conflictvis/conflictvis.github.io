@@ -2,26 +2,24 @@ const url = "web_vis3.csv";
 
 const taxonomy = {
 	geography_representation: ["mapped", "distorted", "abstract"],
-	node_representation: ["explicit", "aggregated", "abstract"],
-	affiliated_org: ["university_research", "gov", "ngo", "private", "media"],
 	level_of_interactivity: ["low", "medium", "high"],
+	node_representation: ["explicit", "aggregated", "abstract"],
+	affiliated_org: ["university_research", "gov", "ngo", "private", "media"]
 };
 
 const facets = Object.keys(taxonomy);
 
 const datatypes = [
-	// 1/ Links
+	// 1/ data availability
 	"data_available",
 	"api",
+	// 2/ visualization features
 	"features_map",
 	"additional_link_attributes",
-	// "no_additional_link_attributes",
 	"additional_node_attributes",
-	// 2/ Geolocations
 	"exact_point_locations",
 	"area_locations",
 	"colocated_nodes",
-	// 3/ Density
 	"dense_networks",
 	"networks_with_varying_density",
 	// 4/ Dynamic
