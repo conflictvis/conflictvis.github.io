@@ -13,9 +13,9 @@ const datatypes = [
 	// 1/ data availability
 	"data_available",
 	"api",
+	"actively_updated",
 	// 2/ visualization features
 	"features_map",
-	"additional_link_attributes",
 	"additional_node_attributes",
 	"exact_point_locations",
 	"area_locations",
