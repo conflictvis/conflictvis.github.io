@@ -116,6 +116,7 @@ h3 {
 	border-left: none;
 }
 
+/*first filters*/
 #filters {
 	text-align: center;
 }
@@ -186,12 +187,10 @@ div.checkbox-container {
 #select_geography_representation label,
 #select_node_representation label,
 #select_link_representation label,
-#select_interactivity label {
+#select_level_of_interactivity label {
 	width: 88px;
 }
 
-#select_composition label {
+#affiliated_org label {
 	width: 138px;
 }
-
-
