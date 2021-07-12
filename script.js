@@ -1,8 +1,8 @@
 const url = "web_vis3.csv";
 
 const taxonomy = {
-	geography_representation: ["mapped", "distorted", "abstract"],
 	level_of_interactivity: ["low", "medium", "high"],
+	geography_representation: ["mapped", "distorted", "abstract"],
 	node_representation: ["explicit", "aggregated", "abstract"],
 	affiliated_org: ["university_research", "gov", "ngo", "private", "media"]
 };
