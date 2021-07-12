@@ -15,15 +15,15 @@ const datatypes = [
 	"api",
 	"actively_updated",
 	// 2/ data source
-	'ACLED',
-	'media',
-	'surveys',
-	'predictive',
-	'global'
+	"ACLED",
+	"media",
+	"surveys",
+	"predictive",
+	"global",
 	// 3/ visualization features
 	"features_map",
-	'customized_vis',
-	'downloadable_vis'
+	"customized_vis",
+	"downloadable_vis"
 ];
 
 const container = d3.select(".grid");
