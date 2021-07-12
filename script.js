@@ -14,14 +14,16 @@ const datatypes = [
 	"data_publically_available",
 	"api",
 	"actively_updated",
-	// 2/ dataset
+	// 2/ data source
 	'ACLED',
 	'media',
 	'surveys',
+	'predictive',
+	'global'
 	// 3/ visualization features
 	"features_map",
-	'customized_viz',
-	'predictive'
+	'customized_vis',
+	'downloadable_vis'
 ];
 
 const container = d3.select(".grid");
