@@ -11,24 +11,22 @@ const facets = Object.keys(taxonomy);
 
 const datatypes = [
 	// 1/ data availability
-	"data_available",
+	"data_publically_available",
 	"api",
 	"actively_updated",
-	// 2/ visualization features
+	// 2/ dataset
+	'ACLED',
+	'media',
+	'surveys',
+	// 3/ visualization features
 	"features_map",
-	"additional_node_attributes",
-	"exact_point_locations",
-	"area_locations",
-	"colocated_nodes",
-	"dense_networks",
-	"networks_with_varying_density",
-	// 4/ Dynamic
-	"dynamic_networks"
+	'customized_viz',
+	'predictive'
 ];
 
 const container = d3.select(".grid");
 
-// create checkboxes to filter techniques
+// create checkboxes to filter techniques (button attributes: interactivity)
 var filters = d3
 	.select("#filters")
 	.selectAll("div")
