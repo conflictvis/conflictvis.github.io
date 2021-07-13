@@ -3,7 +3,8 @@ const url = "web_vis3.csv";
 const taxonomy = {
 	level_of_interactivity: ["low", "medium", "high"],
 	geography_representation: ["mapped", "distorted", "abstract"],
-	node_representation: ["explicit", "aggregated", "abstract"],
+	theme: ["peacebuilding", "conflict_violence", "refugee",
+						"minority_focus", "conflict_tracking", "conflict_risk"],
 	affiliated_org: ["university_research", "government", "ngo", "private", "media"]
 };
 
