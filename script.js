@@ -4,7 +4,7 @@ const taxonomy = {
 	level_of_interactivity: ["low", "medium", "high"],
 	geography_representation: ["mapped", "distorted", "abstract"],
 	node_representation: ["explicit", "aggregated", "abstract"],
-	affiliated_org: ["university_research", "gov", "ngo", "private", "media"]
+	affiliated_org: ["university_research", "government", "ngo", "private", "media"]
 };
 
 const facets = Object.keys(taxonomy);
