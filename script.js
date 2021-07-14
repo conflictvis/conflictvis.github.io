@@ -14,21 +14,25 @@ const datatypes = [
 	"data_publically_available",
 	"api",
 	"actively_updated",
-	// 2/ data source
-	"ACLED",
-	"media",
-	"surveys",
-	"predictive",
-	"global",
 	// 3/ visualization features
 	"features_map",
 	"customized_visualization",
 	"downloadable_visualization"
 ];
 
+const datatypes2 = [
+	// 2/ data source
+	"ACLED",
+	"media",
+	"surveys",
+	"predictive",
+	"global",
+];
+
+
 const container = d3.select(".grid");
 
-// create checkboxes to filter techniques (button attributes: interactivity)
+// create boxes to filter techniques (button attributes: interactivity)
 var filters = d3
 	.select("#filters")
 	.selectAll("div")
@@ -86,6 +90,25 @@ checkData
 	.attr("for", (d) => "check_" + d)
 	.append("span")
 	.text((d) => sentenceCase(d));
+
+// data source features
+var checkData2 = d3
+		.select("#filters_data2")
+		.selectAll("div")
+		.data(datatypes2)
+		.enter()
+		.append("div");
+	checkData
+		.append("input")
+		.attr("type", "checkbox")
+		.attr("class", "input")
+		.attr("id", (d) => "check_" + d)
+		.attr("value", (d) => d);
+	checkData
+		.append("label")
+		.attr("for", (d) => "check_" + d)
+		.append("span")
+		.text((d) => sentenceCase(d));
 
 d3.select("#showall").on("click", function () {
 	d3.selectAll("input").property("checked", false);
