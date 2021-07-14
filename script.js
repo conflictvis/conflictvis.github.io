@@ -17,7 +17,7 @@ const datatypes = [
 	// 3/ visualization features
 	"features_map",
 	"customized_visualization",
-	"downloadable_visualization"
+	"downloadable_visualization",
 	// 2/ data source
 	"ACLED",
 	"media",
