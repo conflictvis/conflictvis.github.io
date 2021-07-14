@@ -12,7 +12,7 @@ const facets = Object.keys(taxonomy);
 const datatypes = [
 	// 1/ data availability
 	"data_publically_available",
-	"api",
+	"API",
 	"actively_updated",
 	// 3/ visualization features
 	"features_map",
@@ -23,7 +23,7 @@ const datatypes = [
 	"media",
 	"surveys",
 	"predictive",
-	"global",
+	"global_focus",
 ];
 
 
