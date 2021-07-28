@@ -4,7 +4,7 @@ const taxonomy = {
 	level_of_interactivity: ["low_interactivity", "medium_interactivity", "high_interactivity"],
 	theme: ["peacebuilding", "conflict_violence", "refugee",
 						"minority_focus", "conflict_tracking", "conflict_risk"],
-	affiliated_org: ["university_research", "government", "ngo", "private", "media"]
+	affiliated_org: ["university_research", "government", "NGO", "private", "media"]
 };
 
 const facets = Object.keys(taxonomy);
