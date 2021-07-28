@@ -15,7 +15,7 @@ const datatypes = [
 	"API",
 	"actively_updated",
 	// 3/ visualization features
-	"features_map",
+	"Geovisualization",
 	"customized_visualization",
 	"downloadable_visualization",
 	// 2/ data source
