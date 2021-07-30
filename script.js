@@ -18,6 +18,8 @@ const datatypes = [
 	"Geovisualization",
 	"customized_visualization",
 	"downloadable_visualization",
+	"network_visualization",
+	"storytelling_visualization",
 	// 2/ data source
 	"ACLED",
 	"media",
