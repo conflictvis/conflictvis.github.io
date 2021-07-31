@@ -16,7 +16,7 @@ const facets = Object.keys(taxonomy);
 
 const datatypes = {
 	// 3/ visualization features
-	visualization_features: ["Geovisualization",
+	visualization_type: ["Geovisualization",
 	"customized_visualization",
 	"downloadable_visualization",
 	"network_visualization",
@@ -28,7 +28,7 @@ const datatypes = {
 		"predictive",
 		"global_focus",
 	],
-	avaiability: [
+	accessibility: [
 		"data_publically_available",
 		"API",
 		"actively_updated",
