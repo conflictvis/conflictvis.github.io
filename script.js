@@ -7,6 +7,11 @@ const taxonomy = {
 	affiliated_organization: ["university_research", "government", "NGO", "private", "media"]
 };
 
+const helpicon = {
+	help1: ["low_interactivity means static or just one level of interactivity"],
+	help2: ["low_interactivity"]
+};
+
 const facets = Object.keys(taxonomy);
 
 const datatypes = [
@@ -34,23 +39,6 @@ const datatypes = [
 const container = d3.select(".grid");
 
 // add in mouseover help buttons
-d3.select('body').append('div').attr('id', 'tooltip').attr('style', 'position: absolute; opacity: 0;');
-d3.select('body').append('svg').attr('width', 300).attr('height', 300);
-d3.select('svg').selectAll('circle').data(['a','b','c'])
-	 .join('circle')
-	 .style("fill", "white")
-	 .attr('r', 5)
-	 .attr('cx', 125)
-	 .attr('cy', (d,i) => i*55+15)
-	 .on('mouseover', function(d) {
-d3.select('#tooltip').transition().duration(200).style('opacity', 1).text(d)
-	 })
-	 .on('mouseout', function() {
-d3.select('#tooltip').style('opacity', 0)
-	 })
-	 .on('mousemove', function() {
-d3.select('#tooltip').style('left', (d3.event.pageX+10) + 'px').style('top', (d3.event.pageY+10) + 'px')
-	 })
 
 d3.select("#showall").on("click", function () {
 d3.selectAll("input").property("checked", false);
@@ -72,6 +60,25 @@ filters
 	.append("h3")
 	// .html(d => '<div class="legend_circle ' + d + '"></div>' + formatText(d));
 	.html((d) => formatText(d));
+
+filters
+	.append("svg")
+	.selectAll('circle')
+	.data(helpicon)
+	.join('circle')
+	.style("fill", "white")
+	.attr('r', 5)
+	.attr('cx', 125)
+	.attr('cy', (d,i) => i*55+15)
+	.on('mouseover', function(d) {
+		 d3.select('#tooltip').transition().duration(200).style('opacity', 1).text(d)
+	})
+	.on('mouseout', function() {
+		 d3.select('#tooltip').style('opacity', 0)
+	})
+	.on('mousemove', function() {
+		 d3.select('#tooltip').style('left', (d3.event.pageX+10) + 'px').style('top', (d3.event.pageY+10) + 'px')
+})
 
 var checkboxes = filters
 	.selectAll("input")
