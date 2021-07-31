@@ -97,8 +97,9 @@ d3.select('body').append('div').attr('id', 'tooltip').attr('style', 'position: a
 d3.select('body').append('svg').attr('width', 300).attr('height', 300);
 d3.select('svg').selectAll('circle').data(['a','b','c'])
 	 .join('circle')
-	 .attr('r', 3)
-	 .attr('cx', 5)
+	 .style("fill", "white")
+	 .attr('r', 5)
+	 .attr('cx', 25)
 	 .attr('cy', (d,i) => i*15+15)
 	 .on('mouseover', function(d) {
 d3.select('#tooltip').transition().duration(200).style('opacity', 1).text(d)
