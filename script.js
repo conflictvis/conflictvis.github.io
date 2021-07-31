@@ -33,6 +33,32 @@ const datatypes = [
 
 const container = d3.select(".grid");
 
+// add in mouseover help buttons
+d3.select('body').append('div').attr('id', 'tooltip').attr('style', 'position: absolute; opacity: 0;');
+d3.select('body').append('svg').attr('width', 300).attr('height', 300);
+d3.select('svg').selectAll('circle').data(['a','b','c'])
+	 .join('circle')
+	 .style("fill", "white")
+	 .attr('r', 5)
+	 .attr('cx', 125)
+	 .attr('cy', (d,i) => i*55+15)
+	 .on('mouseover', function(d) {
+d3.select('#tooltip').transition().duration(200).style('opacity', 1).text(d)
+	 })
+	 .on('mouseout', function() {
+d3.select('#tooltip').style('opacity', 0)
+	 })
+	 .on('mousemove', function() {
+d3.select('#tooltip').style('left', (d3.event.pageX+10) + 'px').style('top', (d3.event.pageY+10) + 'px')
+	 })
+
+d3.select("#showall").on("click", function () {
+d3.selectAll("input").property("checked", false);
+	// dispatch event to reload techniques
+	let event = new Event("change");
+	eventHandler.dispatchEvent(event);
+});
+
 // create boxes to filter techniques (button attributes: interactivity)
 var filters = d3
 	.select("#filters")
@@ -91,32 +117,6 @@ checkData
 	.attr("for", (d) => "check_" + d)
 	.append("span")
 	.text((d) => sentenceCase(d));
-
-// add in mouseover help buttons
-d3.select('body').append('div').attr('id', 'tooltip').attr('style', 'position: absolute; opacity: 0;');
-d3.select('body').append('svg').attr('width', 300).attr('height', 300);
-d3.select('svg').selectAll('circle').data(['a','b','c'])
-	 .join('circle')
-	 .style("fill", "white")
-	 .attr('r', 5)
-	 .attr('cx', 125)
-	 .attr('cy', (d,i) => i*55+15)
-	 .on('mouseover', function(d) {
-d3.select('#tooltip').transition().duration(200).style('opacity', 1).text(d)
-	 })
-	 .on('mouseout', function() {
-d3.select('#tooltip').style('opacity', 0)
-	 })
-	 .on('mousemove', function() {
-d3.select('#tooltip').style('left', (d3.event.pageX+10) + 'px').style('top', (d3.event.pageY+10) + 'px')
-	 })
-
-d3.select("#showall").on("click", function () {
-d3.selectAll("input").property("checked", false);
-	// dispatch event to reload techniques
-	let event = new Event("change");
-	eventHandler.dispatchEvent(event);
-});
 
 d3.csv(url)
 	.then(function (data) {
