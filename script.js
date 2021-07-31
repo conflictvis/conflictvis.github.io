@@ -7,11 +7,6 @@ const taxonomy = {
 	affiliated_organization: ["university_research", "government", "NGO", "private", "media"]
 };
 
-const helpicon = {
-	help1: ["low_interactivity means static or just one level of interactivity"],
-	help2: ["low_interactivity"]
-};
-
 const facets = Object.keys(taxonomy);
 
 const datatypes = {
@@ -112,11 +107,19 @@ checkData
 	.append("input")
 	.attr("type", "checkbox")
 	.attr("class", "input")
-	.attr("id", (d) => "check_" + d)
+	.attr("id", function (d) {
+		return (
+			"check_" + d3.select(this.parentNode.parentNode).datum() + "_" + d
+		);
+	})
 	.attr("value", (d) => d);
 checkData
 	.append("label")
-	.attr("for", (d) => "check_" + d)
+	.attr("for", function (d) {
+		return (
+			"check_" + d3.select(this.parentNode.parentNode).datum() + "_" + d
+		);
+	})
 	.append("span")
 	.text((d) => sentenceCase(d));
 
