@@ -89,7 +89,7 @@ checkboxes
 	.text((d) => formatText(d));
 
 //checkbox portion
-var filters_data = d3
+var dataFilters = d3
 		.select("#filters_data")
 		.selectAll("div")
 		.data(facets2)
@@ -97,13 +97,13 @@ var filters_data = d3
 		.append("div")
 		.attr("id", (d) => "select_" + d);
 
-	filters_data
+	dataFilters
 		.append("h3")
 		// .html(d => '<div class="legend_circle ' + d + '"></div>' + formatText(d));
 		.html((d) => formatText(d));
 
 // checkboxes for data features
-var checkData = filters_data
+var checkData = dataFilters
 	.selectAll("input")
 	.data((d) => datatypes[d])
 	.enter()
@@ -233,12 +233,6 @@ function filterData(d, filters, dataFilters) {
 			return fil[1].length == 0 || fil[1].indexOf(d[fil[0]]) != -1;
 		}) &&
 		dataFilters.every(function (fil) {
-			return d[fil] == "yes";
-		}) &&
-		dataFilters2.every(function (fil) {
-			return d[fil] == "yes";
-		}) &&
-		dataFilters3.every(function (fil) {
 			return d[fil] == "yes";
 		})
 	);
