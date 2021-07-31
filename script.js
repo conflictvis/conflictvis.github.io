@@ -15,16 +15,15 @@ const helpicon = {
 const facets = Object.keys(taxonomy);
 
 const datatypes = [
-	// 1/ data availability
-	"data_publically_available",
-	"API",
-	"actively_updated",
 	// 3/ visualization features
 	"Geovisualization",
 	"customized_visualization",
 	"downloadable_visualization",
 	"network_visualization",
 	"storytelling_visualization",
+];
+
+const datatypes2 = [
 	// 2/ data source
 	"ACLED",
 	"media",
@@ -32,6 +31,14 @@ const datatypes = [
 	"predictive",
 	"global_focus",
 ];
+
+const datatypes3 = [
+	// 1/ data availability
+	"data_publically_available",
+	"API",
+	"actively_updated",
+];
+
 
 
 
@@ -87,7 +94,7 @@ checkboxes
 	.append("span")
 	.text((d) => formatText(d));
 
-// checkboxes for data types
+// checkboxes for data features
 var checkData = d3
 	.select("#filters_data")
 	.selectAll("div")
@@ -105,6 +112,42 @@ checkData
 	.attr("for", (d) => "check_" + d)
 	.append("span")
 	.text((d) => sentenceCase(d));
+
+var checkData = d3
+		.select("#filters2_data")
+		.selectAll("div")
+		.data(datatypes2)
+		.enter()
+		.append("div");
+	checkData
+		.append("input")
+		.attr("type", "checkbox")
+		.attr("class", "input")
+		.attr("id", (d) => "check_" + d)
+		.attr("value", (d) => d);
+	checkData
+		.append("label")
+		.attr("for", (d) => "check_" + d)
+		.append("span")
+		.text((d) => sentenceCase(d));
+
+var checkData = d3
+			.select("#filters3_data")
+			.selectAll("div")
+			.data(datatypes3)
+			.enter()
+			.append("div");
+		checkData
+			.append("input")
+			.attr("type", "checkbox")
+			.attr("class", "input")
+			.attr("id", (d) => "check_" + d)
+			.attr("value", (d) => d);
+		checkData
+			.append("label")
+			.attr("for", (d) => "check_" + d)
+			.append("span")
+			.text((d) => sentenceCase(d));
 
 d3.csv(url)
 	.then(function (data) {
@@ -132,14 +175,20 @@ d3.csv(url)
 			var dataFilters = datatypes.filter(function (d) {
 				return d3.select("#check_" + d).property("checked");
 			});
+			var dataFilters2 = datatypes2.filter(function (d) {
+				return d3.select("#check_" + d).property("checked");
+			});
+			var dataFilters3 = datatypes3.filter(function (d) {
+				return d3.select("#check_" + d).property("checked");
+			});
 
 			// update
-			refreshTechniques(filters, dataFilters);
+			refreshTechniques(filters, dataFilters, dataFilters2, dataFilters3);
 		});
 
-		function refreshTechniques(filters, dataFilters) {
+		function refreshTechniques(filters, dataFilters, dataFilters2, dataFilters3) {
 			// filter
-			var fData = data.filter((d) => filterData(d, filters, dataFilters));
+			var fData = data.filter((d) => filterData(d, filters, dataFilters,dataFilters2, dataFilters3));
 			// update count in heading
 			d3.select("#count").text(fData.length);
 			// get IDs of techniques matching filter
@@ -199,7 +248,7 @@ d3.csv(url)
 		throw error;
 	});
 
-function filterData(d, filters, dataFilters) {
+function filterData(d, filters, dataFilters, dataFilters2, dataFilters3) {
 	return (
 		filters.every(function (fil) {
 			// facet: fil[0]
