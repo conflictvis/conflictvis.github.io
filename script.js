@@ -113,37 +113,37 @@ checkData
 	.append("span")
 	.text((d) => sentenceCase(d));
 
-var checkData = d3
+var checkData2 = d3
 		.select("#filters2_data")
 		.selectAll("div")
 		.data(datatypes2)
 		.enter()
 		.append("div");
-	checkData
+	checkData2
 		.append("input")
 		.attr("type", "checkbox")
 		.attr("class", "input")
 		.attr("id", (d) => "check_" + d)
 		.attr("value", (d) => d);
-	checkData
+	checkData2
 		.append("label")
 		.attr("for", (d) => "check_" + d)
 		.append("span")
 		.text((d) => sentenceCase(d));
 
-var checkData = d3
+var checkData3 = d3
 			.select("#filters3_data")
 			.selectAll("div")
 			.data(datatypes3)
 			.enter()
 			.append("div");
-		checkData
+		checkData3
 			.append("input")
 			.attr("type", "checkbox")
 			.attr("class", "input")
 			.attr("id", (d) => "check_" + d)
 			.attr("value", (d) => d);
-		checkData
+		checkData3
 			.append("label")
 			.attr("for", (d) => "check_" + d)
 			.append("span")
