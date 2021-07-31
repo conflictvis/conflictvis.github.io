@@ -14,34 +14,28 @@ const helpicon = {
 
 const facets = Object.keys(taxonomy);
 
-const datatypes = [
+const datatypes = {
 	// 3/ visualization features
-	"Geovisualization",
+	visualization_features: ["Geovisualization",
 	"customized_visualization",
 	"downloadable_visualization",
 	"network_visualization",
-	"storytelling_visualization",
-];
+	"storytelling_visualization"],
+	data_source: [
+		"ACLED",
+		"media",
+		"surveys",
+		"predictive",
+		"global_focus",
+	],
+	avaiability: [
+		"data_publically_available",
+		"API",
+		"actively_updated",
+	]
+};
 
-const datatypes2 = [
-	// 2/ data source
-	"ACLED",
-	"media",
-	"surveys",
-	"predictive",
-	"global_focus",
-];
-
-const datatypes3 = [
-	// 1/ data availability
-	"data_publically_available",
-	"API",
-	"actively_updated",
-];
-
-
-
-
+const facets2 = Object.keys(taxonomy);
 
 const container = d3.select(".grid");
 
@@ -94,11 +88,24 @@ checkboxes
 	.append("span")
 	.text((d) => formatText(d));
 
+	// create boxes to filter techniques (button attributes: interactivity)
+var filters_data = d3
+		.select("#filters_data")
+		.selectAll("div")
+		.data(facets2)
+		.enter()
+		.append("div")
+		.attr("id", (d) => "select_" + d);
+
+	filters2
+		.append("h3")
+		// .html(d => '<div class="legend_circle ' + d + '"></div>' + formatText(d));
+		.html((d) => formatText(d));
+
 // checkboxes for data features
-var checkData = d3
-	.select("#filters_data")
-	.selectAll("div")
-	.data(datatypes)
+var checkData = filters_data
+	.selectAll("input")
+	.data((d) => datatypes[d])
 	.enter()
 	.append("div");
 checkData
@@ -113,41 +120,6 @@ checkData
 	.append("span")
 	.text((d) => sentenceCase(d));
 
-var checkData2 = d3
-		.select("#filters2_data")
-		.selectAll("div")
-		.data(datatypes2)
-		.enter()
-		.append("div");
-	checkData2
-		.append("input")
-		.attr("type", "checkbox")
-		.attr("class", "input")
-		.attr("id", (d) => "check_" + d)
-		.attr("value", (d) => d);
-	checkData2
-		.append("label")
-		.attr("for", (d) => "check_" + d)
-		.append("span")
-		.text((d) => sentenceCase(d));
-
-var checkData3 = d3
-			.select("#filters3_data")
-			.selectAll("div")
-			.data(datatypes3)
-			.enter()
-			.append("div");
-		checkData3
-			.append("input")
-			.attr("type", "checkbox")
-			.attr("class", "input")
-			.attr("id", (d) => "check_" + d)
-			.attr("value", (d) => d);
-		checkData3
-			.append("label")
-			.attr("for", (d) => "check_" + d)
-			.append("span")
-			.text((d) => sentenceCase(d));
 
 d3.csv(url)
 	.then(function (data) {
@@ -183,12 +155,12 @@ d3.csv(url)
 			});
 
 			// update
-			refreshTechniques(filters, dataFilters, dataFilters2, dataFilters3);
+			refreshTechniques(filters, dataFilters);
 		});
 
-		function refreshTechniques(filters, dataFilters, dataFilters2, dataFilters3) {
+		function refreshTechniques(filters, dataFilters) {
 			// filter
-			var fData = data.filter((d) => filterData(d, filters, dataFilters,dataFilters2, dataFilters3));
+			var fData = data.filter((d) => filterData(d, filters, dataFilters));
 			// update count in heading
 			d3.select("#count").text(fData.length);
 			// get IDs of techniques matching filter
@@ -248,7 +220,7 @@ d3.csv(url)
 		throw error;
 	});
 
-function filterData(d, filters, dataFilters, dataFilters2, dataFilters3) {
+function filterData(d, filters, dataFilters) {
 	return (
 		filters.every(function (fil) {
 			// facet: fil[0]
