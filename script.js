@@ -35,7 +35,7 @@ const datatypes = {
 	]
 };
 
-const facets2 = Object.keys(taxonomy);
+const facets2 = Object.keys(datatypes);
 
 const container = d3.select(".grid");
 
@@ -88,7 +88,7 @@ checkboxes
 	.append("span")
 	.text((d) => formatText(d));
 
-	// create boxes to filter techniques (button attributes: interactivity)
+//checkbox portion
 var filters_data = d3
 		.select("#filters_data")
 		.selectAll("div")
@@ -97,7 +97,7 @@ var filters_data = d3
 		.append("div")
 		.attr("id", (d) => "select_" + d);
 
-	filters2
+	filters_data
 		.append("h3")
 		// .html(d => '<div class="legend_circle ' + d + '"></div>' + formatText(d));
 		.html((d) => formatText(d));
