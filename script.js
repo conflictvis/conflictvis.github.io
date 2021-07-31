@@ -258,6 +258,12 @@ function filterData(d, filters, dataFilters, dataFilters2, dataFilters3) {
 		}) &&
 		dataFilters.every(function (fil) {
 			return d[fil] == "yes";
+		}) &&
+		dataFilters2.every(function (fil) {
+			return d[fil] == "yes";
+		}) &&
+		dataFilters3.every(function (fil) {
+			return d[fil] == "yes";
 		})
 	);
 }
