@@ -98,8 +98,8 @@ d3.select('body').append('svg').attr('width', 300).attr('height', 300);
 d3.select('svg').selectAll('circle').data(['a','b','c'])
 	 .join('circle')
 	 .attr('r', 3)
-	 .attr('cy', 5)
-	 .attr('cx', (d,i) => i*15+15)
+	 .attr('cx', 5)
+	 .attr('cy', (d,i) => i*15+15)
 	 .on('mouseover', function(d) {
 d3.select('#tooltip').transition().duration(200).style('opacity', 1).text(d)
 	 })
@@ -111,7 +111,7 @@ d3.select('#tooltip').style('left', (d3.event.pageX+10) + 'px').style('top', (d3
 	 })
 
 d3.select("#showall").on("click", function () {
-	d3.selectAll("input").property("checked", false);
+d3.selectAll("input").property("checked", false);
 	// dispatch event to reload techniques
 	let event = new Event("change");
 	eventHandler.dispatchEvent(event);
