@@ -130,7 +130,7 @@ d3.csv(url)
 
 		// listen for changes in filters
 		d3.selectAll(".input").on("change", function () {
-			// get filter values
+			// get filter values for the boxes
 			var filters = facets.map(function (facet) {
 				var cats = [];
 				taxonomy[facet].forEach(function (cat) {
@@ -144,16 +144,20 @@ d3.csv(url)
 				});
 				return [facet, cats];
 			});
-			var dataFilters = datatypes.filter(function (d) {
-				return d3.select("#check_" + d).property("checked");
+			//get filters for the check boxes
+			var dataFilters = facets2.map(function (facet2) {
+				var cats2 = [];
+				datatypes[facet2].forEach(function (cat2) {
+					if (
+						d3
+							.select("#check_" + facet2 + "_" + cat2)
+							.property("checked")
+					) {
+						cats2.push(cat2);
+					}
+				});
+				return [facet2, cats2];
 			});
-			var dataFilters2 = datatypes2.filter(function (d) {
-				return d3.select("#check_" + d).property("checked");
-			});
-			var dataFilters3 = datatypes3.filter(function (d) {
-				return d3.select("#check_" + d).property("checked");
-			});
-
 			// update
 			refreshTechniques(filters, dataFilters);
 		});
