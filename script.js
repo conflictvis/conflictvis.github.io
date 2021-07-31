@@ -61,25 +61,6 @@ filters
 	// .html(d => '<div class="legend_circle ' + d + '"></div>' + formatText(d));
 	.html((d) => formatText(d));
 
-filters
-	.append("svg")
-	.selectAll('circle')
-	.data(helpicon)
-	.join('circle')
-	.style("fill", "white")
-	.attr('r', 5)
-	.attr('cx', 125)
-	.attr('cy', (d,i) => i*55+15)
-	.on('mouseover', function(d) {
-		 d3.select('#tooltip').transition().duration(200).style('opacity', 1).text(d)
-	})
-	.on('mouseout', function() {
-		 d3.select('#tooltip').style('opacity', 0)
-	})
-	.on('mousemove', function() {
-		 d3.select('#tooltip').style('left', (d3.event.pageX+10) + 'px').style('top', (d3.event.pageY+10) + 'px')
-})
-
 var checkboxes = filters
 	.selectAll("input")
 	.data((d) => taxonomy[d])
