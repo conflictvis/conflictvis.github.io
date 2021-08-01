@@ -246,7 +246,7 @@ function filterData(d, filters, dataFilters) {
 
 			// currently fil2[1].indexOf(d[fil2[0]]) for filter 2 is all 0
 			// need filter 2 to show 0 if value exists
-			return fil2[1].length == 0 || fil2[1].indexOf(d[fil2[1]]) != -1;
+			return fil2[1].length == 0 || d[fil2[1]] == "yes";
 		})
 		//dataFilters.every(function (fil) {
 		//	return d[fil] == "yes";
