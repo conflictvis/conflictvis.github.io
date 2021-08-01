@@ -159,7 +159,6 @@ d3.csv(url)
 						cats2.push(cat2);
 					}
 				});
-				console.log(cats2);
 				return [facet2, cats2];
 			});
 			// update
@@ -167,9 +166,11 @@ d3.csv(url)
 		});
 
 		function refreshTechniques(filters, dataFilters) {
+			console.log(filters);
+			console.log("DATAFILTERS: ")
+			console.log(dataFilters);
 			// filter
 			var fData = data.filter((d) => filterData(d, filters, dataFilters));
-			console.log(fData);
 			// update count in heading
 			d3.select("#count").text(fData.length);
 			// get IDs of techniques matching filter
