@@ -240,7 +240,9 @@ function filterData(d, filters, dataFilters) {
 			// selected: fil[1]
 			// check if either array is empty or category is selected
 			console.log("is this value: ");
- 			console.log(d[fil2[0]])
+			console.log([fil2[0]])
+			console.log("D is...")
+ 			console.log(d)
 			console.log("in this array: ");
 			console.log(fil2[1])
 
