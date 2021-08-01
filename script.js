@@ -233,17 +233,20 @@ function filterData(d, filters, dataFilters) {
 			// facet: fil[0]
 			// selected: fil[1]
 			// check if either array is empty or category is selected
-			console.log("FIRST ONE")
-			console.log(fil[1].indexOf(d[fil[0]]))
 			return fil[1].length == 0 || fil[1].indexOf(d[fil[0]]) != -1;
 		}) &&
 		dataFilters.every(function (fil2) {
 			// facet: fil[0]
 			// selected: fil[1]
 			// check if either array is empty or category is selected
-			console.log("SECOND ONE:")
-			console.log(fil2[1].indexOf(d[fil2[0]]))
-			return fil2[1].length == 0;
+			console.log("is this value: ");
+ 			console.log(d[fil2[0]])
+			console.log("in this array: ");
+			console.log(fil2[1])
+
+			// currently fil2[1].indexOf(d[fil2[0]]) for filter 2 is all 0
+			// need filter 2 to show 0 if value exists
+			return fil2[1].length == 0 || fil2[1].indexOf(d[fil2[0]]) != -1;
 		})
 		//dataFilters.every(function (fil) {
 		//	return d[fil] == "yes";
