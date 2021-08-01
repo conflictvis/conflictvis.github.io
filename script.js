@@ -239,16 +239,14 @@ function filterData(d, filters, dataFilters) {
 			// facet: fil[0]
 			// selected: fil[1]
 			// check if either array is empty or category is selected
-			console.log("is this value: ");
-			console.log([fil2[0]])
 			console.log("D is...")
- 			console.log(d)
+ 			console.log(d[fil2[1]]) // d =  one specific data source
 			console.log("in this array: ");
-			console.log(fil2[1])
+			console.log(fil2[1]) // acled, media, surveys, predictive, etc
 
 			// currently fil2[1].indexOf(d[fil2[0]]) for filter 2 is all 0
 			// need filter 2 to show 0 if value exists
-			return fil2[1].length == 0 || fil2[1].indexOf(d[fil2[0]]) != -1;
+			return fil2[1].length == 0 || fil2[1].indexOf(d[fil2[1]]) != -1;
 		})
 		//dataFilters.every(function (fil) {
 		//	return d[fil] == "yes";
