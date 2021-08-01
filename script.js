@@ -239,7 +239,8 @@ function filterData(d, filters, dataFilters) {
 			// facet: fil[0]
 			// selected: fil[1]
 			// check if either array is empty or category is selected
-			console.log(fil);
+			console.log(fil[1]);
+			console.log(d[fil[0]]);
 			return fil[1].length == 0 || fil[1].indexOf(d[fil[0]]) != -1;
 		})
 		//dataFilters.every(function (fil) {
