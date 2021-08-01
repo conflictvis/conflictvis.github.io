@@ -166,9 +166,6 @@ d3.csv(url)
 		});
 
 		function refreshTechniques(filters, dataFilters) {
-			console.log(filters);
-			console.log("DATAFILTERS: ")
-			console.log(dataFilters);
 			// filter
 			var fData = data.filter((d) => filterData(d, filters, dataFilters));
 			// update count in heading
@@ -236,13 +233,16 @@ function filterData(d, filters, dataFilters) {
 			// facet: fil[0]
 			// selected: fil[1]
 			// check if either array is empty or category is selected
+			console.log(fil[1].indexOf(d[fil[0]]))
 			return fil[1].length == 0 || fil[1].indexOf(d[fil[0]]) != -1;
 		}) &&
 		dataFilters.every(function (fil2) {
 			// facet: fil[0]
 			// selected: fil[1]
 			// check if either array is empty or category is selected
-			return fil2[1].length == 0 || fil2[1].indexOf(d[fil2[0]]) != -1;
+			console.log("SECOND ONE:")
+			console.log(fil2[1].indexOf(d[fil2[0]]))
+			return fil2[1].length == 0;
 		})
 		//dataFilters.every(function (fil) {
 		//	return d[fil] == "yes";
