@@ -234,7 +234,16 @@ function filterData(d, filters, dataFilters) {
 			// selected: fil[1]
 			// check if either array is empty or category is selected
 			return fil[1].length == 0 || fil[1].indexOf(d[fil[0]]) != -1;
+		}) &&
+		dataFilters.every(function (fil) {
+			// facet: fil[0]
+			// selected: fil[1]
+			// check if either array is empty or category is selected
+			return fil[1].length == 0 || fil[1].indexOf(d[fil[0]]) != -1;
 		})
+		//dataFilters.every(function (fil) {
+		//	return d[fil] == "yes";
+		//})
 	);
 }
 
