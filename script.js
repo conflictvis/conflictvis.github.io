@@ -24,7 +24,7 @@ const datatypes = {
 		"global_focus",
 	],
 	accessibility: [
-		"data_publically_available",
+		"data_publicly_available",
 		"API",
 		"actively_updated",
 	]
@@ -238,11 +238,6 @@ function filterData(d, filters, dataFilters) {
 		dataFilters.every(function (fil2) {
 			// facet: fil[0]
 			// selected: fil[1]
-			// check if either array is empty or category is selected
-			console.log("D is...")
- 			console.log(d[fil2[1]]) // d =  one specific data source
-			console.log("in this array: ");
-			console.log(fil2[1]) // acled, media, surveys, predictive, etc
 
 			// currently fil2[1].indexOf(d[fil2[0]]) for filter 2 is all 0
 			// need filter 2 to show 0 if value exists
