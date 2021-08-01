@@ -241,7 +241,7 @@ function filterData(d, filters, dataFilters) {
 			// check if either array is empty or category is selected
 			console.log(fil[1].length);
 			console.log("Zero place")
-			console.lo(fil[1].indexOf(d[fil[0]]))
+			console.log(fil[1].indexOf(d[fil[0]]))
 			return fil[1].length == 0 || fil[1].indexOf(d[fil[0]]) != -1;
 		})
 		//dataFilters.every(function (fil) {
