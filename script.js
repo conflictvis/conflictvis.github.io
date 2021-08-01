@@ -102,7 +102,8 @@ var checkData = dataFilters
 	.selectAll("input")
 	.data((d) => datatypes[d])
 	.enter()
-	.append("div");
+	.append("div")
+	.classed("checkbox-container", true);;
 checkData
 	.append("input")
 	.attr("type", "checkbox")
