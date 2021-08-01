@@ -168,6 +168,7 @@ d3.csv(url)
 		function refreshTechniques(filters, dataFilters) {
 			// filter
 			var fData = data.filter((d) => filterData(d, filters, dataFilters));
+			console.log(fData);
 			// update count in heading
 			d3.select("#count").text(fData.length);
 			// get IDs of techniques matching filter
@@ -239,9 +240,6 @@ function filterData(d, filters, dataFilters) {
 			// facet: fil[0]
 			// selected: fil[1]
 			// check if either array is empty or category is selected
-			console.log(fil[1].length);
-			console.log("Zero place")
-			console.log(fil[1].indexOf(d[fil[0]]))
 			return fil[1].length == 0 || fil[1].indexOf(d[fil[0]]) != -1;
 		})
 		//dataFilters.every(function (fil) {
