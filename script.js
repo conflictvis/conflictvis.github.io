@@ -103,7 +103,6 @@ var checkData = dataFilters
 	.data((d) => datatypes[d])
 	.enter()
 	.append("div")
-	.classed("checkbox-container", true);;
 checkData
 	.append("input")
 	.attr("type", "checkbox")
@@ -160,6 +159,7 @@ d3.csv(url)
 						cats2.push(cat2);
 					}
 				});
+				console.log(cats2);
 				return [facet2, cats2];
 			});
 			// update
