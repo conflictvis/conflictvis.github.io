@@ -233,6 +233,7 @@ function filterData(d, filters, dataFilters) {
 			// facet: fil[0]
 			// selected: fil[1]
 			// check if either array is empty or category is selected
+			console.log("FIRST ONE")
 			console.log(fil[1].indexOf(d[fil[0]]))
 			return fil[1].length == 0 || fil[1].indexOf(d[fil[0]]) != -1;
 		}) &&
