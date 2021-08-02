@@ -157,6 +157,7 @@ div.checkbox-container {
 }
 
 #filters input[type="checkbox"] {
+	columns: 2;
 	position: absolute;
 	opacity: 0;
 	cursor: pointer;
