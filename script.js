@@ -19,7 +19,9 @@ const datatypes = {
 	data_source: [
 		"ACLED",
 		"media",
-		"surveys",
+		"surveys"
+	],
+	subject_matter: [
 		"predictive",
 		"global_focus",
 	],
