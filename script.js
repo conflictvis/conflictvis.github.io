@@ -20,6 +20,9 @@ const datatypes = {
 		"ACLED",
 		"media",
 		"surveys"
+		"PA-X",
+		"UCDP",
+		"Custom_Indicator",
 	],
 	subject_matter: [
 		"predictive",
