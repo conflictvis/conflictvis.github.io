@@ -1,8 +1,8 @@
 const url = "web_vis3.csv";
 
 const taxonomy = {
-	conflict_theme: ["conflict_violence", "refugee",
-						"minority_focus", "conflict_tracking", "conflict_risk"],
+	conflict_theme: ["violence", "refugee",
+						"minority_focus", "tracking", "risk"],
 	peace_theme: ["peacebuilding", "peace_agreements"],
 	affiliated_organization: ["university", "gov.", "NGO", "private", "media"],
 	level_of_interactivity: ["low_interactivity", "medium_interactivity", "high_interactivity"]
