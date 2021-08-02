@@ -15,7 +15,8 @@ const datatypes = {
 	"customized_visualization",
 	"downloadable_visualization",
 	"network_visualization",
-	"storytelling_visualization"],
+	"storytelling_visualization",
+	"highly_interactive_visualization"],
 	data_source: [
 		"ACLED",
 		"media",
