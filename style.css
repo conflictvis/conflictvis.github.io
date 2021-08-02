@@ -94,7 +94,7 @@ h3 {
 }
 
 .grid-item h2 {
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 600;
 	text-shadow: none;
 	margin: 8px 0;
@@ -157,7 +157,6 @@ div.checkbox-container {
 }
 
 #filters input[type="checkbox"] {
-	columns: 2;
 	position: absolute;
 	opacity: 0;
 	cursor: pointer;
