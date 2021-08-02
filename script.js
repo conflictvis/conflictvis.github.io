@@ -19,7 +19,7 @@ const datatypes = {
 	data_source: [
 		"ACLED",
 		"media",
-		"surveys"
+		"surveys",
 		"PA-X",
 		"UCDP",
 		"Custom_Indicator",
