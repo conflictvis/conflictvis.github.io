@@ -12,6 +12,7 @@ const datatypes = {
 	// 3/ visualization features
 	visualization_type: ["Geovisualization",
 	"customized_visualization",
+	"Dashboard_visualization",
 	"downloadable_visualization",
 	"network_visualization",
 	"storytelling_visualization",
