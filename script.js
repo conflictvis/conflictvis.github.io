@@ -3,18 +3,18 @@ const url = "web_vis3.csv";
 const taxonomy = {
 	conflict_theme: ["violence", "refugee", "minority", "tracking", "risk"],
 	peace_theme: ["peacebuilding", "peace_agreements"],
-	affiliated_organization: ["university", "gov", "NGO", "private", "media"]
+	affiliated_organization: ["university", "gov", "NGO", "private", "media"],
+	geographic_focus: [
+		"global",
+		"africa",
+		"Middle_East",
+	],
 };
 
 const facets = Object.keys(taxonomy);
 
 const datatypes = {
 	// 3/ visualization features
-	geographic_focus: [
-		"global",
-		"africa",
-		"Middle_East",
-	],
 	visualization_type: ["Geovisualization",
 	"customized_visualization",
 	"Dashboard_visualization",
@@ -206,7 +206,7 @@ d3.csv(url)
 		div.append("span").html((d) =>
 			[
 				d.Author,
-				". <i>",
+				" <i>",
 				"</i> (",
 				d.Dataset,
 				")",
