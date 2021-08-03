@@ -10,6 +10,11 @@ const facets = Object.keys(taxonomy);
 
 const datatypes = {
 	// 3/ visualization features
+	geographic_focus: [
+		"global",
+		"africa",
+		"Middle_East",
+	],
 	visualization_type: ["Geovisualization",
 	"customized_visualization",
 	"Dashboard_visualization",
@@ -24,11 +29,6 @@ const datatypes = {
 		"PA-X",
 		"UCDP",
 		"Custom_Indicator",
-	],
-	geographic_focus: [
-		"global",
-		"africa",
-		"Middle_East",
 	],
 	accessibility: [
 		"data_publicly_available",
