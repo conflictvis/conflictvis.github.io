@@ -28,7 +28,7 @@ const datatypes = {
 	geographic_focus: [
 		"global",
 		"africa",
-		"middle_east",
+		"Middle_East",
 	],
 	accessibility: [
 		"data_publicly_available",
