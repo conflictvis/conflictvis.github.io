@@ -112,13 +112,14 @@ var dataFilters = d3
 
 // checkboxes for data features
 var checkData = dataFilters
-	.selectAll("select")
-	.data((d) => vis_libraries[d])
+	.selectAll("input")
+	.data((d) => datatypes[d])
 	.enter()
 	.append("div")
 checkData
-	.append("select")
-	.attr("class", "select")
+	.append("input")
+	.attr("type", "checkbox")
+	.attr("class", "input")
 	.attr("id", function (d) {
 		return (
 			"check_" + d3.select(this.parentNode.parentNode).datum() + "_" + d
@@ -134,46 +135,6 @@ checkData
 	})
 	.append("span")
 	.text((d) => sentenceCase(d));
-
-
-	//checkbox portion
-var dropFilters = d3
-			.select("#select_button")
-			.selectAll("div")
-			.data(facets3)
-			.enter()
-			.append("div")
-			.attr("id", (d) => "select_" + d);
-
-		dropFilters
-			.append("h3")
-			// .html(d => '<div class="legend_circle ' + d + '"></div>' + formatText(d));
-			.html((d) => formatText(d));
-
-var dropData = dropFilters
-				.selectAll("input")
-				.data((d) => datatypes[d])
-				.enter()
-				.append("div")
-			dropData
-				.append("input")
-				.attr("type", "checkbox")
-				.attr("class", "input")
-				.attr("id", function (d) {
-					return (
-						"check_" + d3.select(this.parentNode.parentNode).datum() + "_" + d
-					);
-				})
-				.attr("value", (d) => d);
-			dropData
-				.append("label")
-				.attr("for", function (d) {
-					return (
-						"check_" + d3.select(this.parentNode.parentNode).datum() + "_" + d
-					);
-				})
-				.append("span")
-				.text((d) => sentenceCase(d));
 
 
 d3.csv(url)
