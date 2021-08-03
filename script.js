@@ -12,8 +12,8 @@ const taxonomy = {
 };
 
 const taxonomy_tags = {
-	conflict_theme: ["violence", "refugee", "minority", "tracking", "risk"],
-	peace_theme: ["peacebuilding", "peace_agreements"],
+	theme: ["violence", "refugee", "minority", "tracking", "risk",
+					"peacebuilding", "peace_agreements"],
 	affiliated_organization: ["university", "gov", "NGO", "private", "media"],
 	geographic_focus: [
 		"global",
