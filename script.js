@@ -25,9 +25,10 @@ const datatypes = {
 		"UCDP",
 		"Custom_Indicator",
 	],
-	subject_matter: [
-		"predictive",
-		"global_focus",
+	geographic_focus: [
+		"global",
+		"africa",
+		"middle_east",
 	],
 	accessibility: [
 		"data_publicly_available",
