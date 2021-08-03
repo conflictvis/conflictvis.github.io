@@ -11,6 +11,19 @@ const taxonomy = {
 	],
 };
 
+const taxonomy_tags = {
+	conflict_theme: ["violence", "refugee", "minority", "tracking", "risk"],
+	peace_theme: ["peacebuilding", "peace_agreements"],
+	affiliated_organization: ["university", "gov", "NGO", "private", "media"],
+	geographic_focus: [
+		"global",
+		"africa",
+		"Middle_East",
+	],
+	visualization_library: ["Leaflet", "Tableau", "Microsoft Power BI", "CARTO", "ESRI"]
+};
+const tags_facets = Object.keys(taxonomy_tags);
+
 const facets = Object.keys(taxonomy);
 
 const datatypes = {
@@ -39,11 +52,6 @@ const datatypes = {
 
 const facets2 = Object.keys(datatypes);
 
-const vis_libraries = {
-	visualization_library: ["Leaflet", "Tableau", "Microsoft Power BI", "CARTO", "ESRI"]
-};
-
-const facets3 = Object.keys(vis_libraries);
 
 const container = d3.select(".grid");
 
@@ -217,7 +225,7 @@ d3.csv(url)
 		var tags = div.append("div").style("margin-top", "7px");
 
 		// add tags on technique cards
-		facets.forEach(function (facet) {
+		tags_facets.forEach(function (facet) {
 			tags.append("div")
 				.classed("tag", true)
 				.classed(facet, true)
