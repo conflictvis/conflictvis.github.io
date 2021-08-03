@@ -12,7 +12,7 @@ const taxonomy = {
 };
 
 const taxonomy_tags = {
-	theme: ["violence", "refugee", "minority", "tracking", "risk",
+	theme: ["conflict_violence", "refugee", "minority", "conflict_tracking", "conflict_risk",
 					"peacebuilding", "peace_agreements"],
 	affiliated_organization: ["university", "gov", "NGO", "private", "media"],
 	geographic_focus: [
@@ -215,9 +215,7 @@ d3.csv(url)
 			[
 				d.Author,
 				" <i>",
-				"</i> (",
-				d.Dataset,
-				")",
+				"</i>",
 				" <a href=" + d.URL + ' target="_blank">[Link]</a>',
 				"<br>",
 			].join("")
