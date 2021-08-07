@@ -187,7 +187,7 @@ div.checkbox-container {
 	-moz-column-count: 2;
 	-webkit-column-count: 2;
 	margin-top:0px;
-	break-inside: avoid;
+	break-inside: avoid-column;
 }
 
 #filters_data h3{
