@@ -188,7 +188,7 @@ div.checkbox-container {
 	-webkit-column-count: 2;
 	margin-top:0px;
 	display:flex;
-	padding: 20px;
+	justify-content:space-between;
 }
 
 #filters_data h3{
