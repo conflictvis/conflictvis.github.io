@@ -188,14 +188,16 @@ div.checkbox-container {
 
 #select_conflict_theme label{
 	width: 58px;
-	},
+},
+
 #select_peace_theme label{
-	width: 88px;
-}
+	width: 95px;
+},
 
 #select_geographic_focus label {
 	width: 88px;
-}
+},
+
 #select_affiliated_organization label{
 	width: 58px;
 }

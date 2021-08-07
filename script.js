@@ -5,8 +5,8 @@ const taxonomy = {
 	affiliated_organization: ["university", "gov", "NGO", "private", "media"],
 	peace_theme: ["peacebuilding", "peace_agreements"],
 	geographic_focus: [
-		"global",
-		"africa",
+		"Global",
+		"Africa",
 		"Middle_East",
 	],
 };
@@ -29,11 +29,12 @@ const facets = Object.keys(taxonomy);
 const datatypes = {
 	// 3/ visualization features
 	visualization_type: ["Geovisualization",
-	"customized_visualization",
-	"Dashboard_visualization",
-	"downloadable_visualization",
 	"network_visualization",
+	"temporal_visualization",
+	"Dashboard_visualization",
 	"storytelling_visualization",
+	"customized_visualization",
+	"downloadable_visualization",
 	"highly_interactive_visualization"],
 	data_source: [
 		"ACLED",
