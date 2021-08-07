@@ -43,9 +43,10 @@ const datatypes = {
 		"downloadable",
 		"highly_interactive"
 	],
-	visualization_type: ["Geovisualization",
+	visualization_type: [
 	"network",
 	"temporal",
+	"Geovisualization",
 	"Dashboard",
 	"storytelling",
 	"customized"],
