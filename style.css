@@ -119,12 +119,14 @@ h3 {
 /*first filters*/
 #filters {
 	text-align: center;
-	-webkit-columns: 150px;
-	-moz-columns: 150px;
-	columns: 150px;
-	-webkit-column-gap: 2em;
-	-moz-column-gap: 2em;
-	column-gap: 2em;  
+	width: 100%;
+	line-height: 0;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 0;
+	-moz-column-count: 2;
+	-moz-column-gap: 0;
+	column-count: 2;
+	column-gap: 0;
 }
 
 #filters input[type="checkbox"]:checked + label {
@@ -196,7 +198,7 @@ div.checkbox-container {
 },
 
 #select_peace_theme label{
-	width: 95px;
+	width: 98px;
 },
 
 #select_geographic_focus label {
