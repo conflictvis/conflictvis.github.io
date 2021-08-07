@@ -120,8 +120,7 @@ h3 {
 #filters {
 	text-align: center;
 	width: 100%;
-	-webkit-margin-before: 0;
-	-webkit-margin-after: 0;
+	column-fill: balance;
 	-webkit-column-count: 2;
 	-webkit-column-gap: 0;
 	-moz-column-count: 2;
