@@ -122,7 +122,6 @@ h3 {
 	-webkit-column-count: 2;
 	-moz-column-count: 2;
 	column-count: 2;
-	display: block;
 	margin-top: 10px;
 }
 
@@ -137,6 +136,12 @@ h3 {
 }
 
 /*Checkboxes*/
+div.checkbox-container {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
 /* label for the checkbox boxes */
 #filters label {
 	display: block;
