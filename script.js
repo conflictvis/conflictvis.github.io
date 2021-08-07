@@ -28,12 +28,6 @@ const facets = Object.keys(taxonomy);
 
 const datatypes = {
 	// 3/ visualization features
-	visualization_type: ["Geovisualization",
-	"network",
-	"temporal",
-	"Dashboard",
-	"storytelling",
-	"customized"],
 	data_source: [
 		"ACLED",
 		"media",
@@ -48,7 +42,13 @@ const datatypes = {
 		"actively_updated",
 		"downloadable",
 		"highly_interactive"
-	]
+	],
+	visualization_type: ["Geovisualization",
+	"network",
+	"temporal",
+	"Dashboard",
+	"storytelling",
+	"customized"],
 };
 
 const facets2 = Object.keys(datatypes);
