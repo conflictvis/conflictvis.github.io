@@ -122,7 +122,8 @@ h3 {
 	-webkit-column-count: 2;
 	-moz-column-count: 2;
 	column-count: 2;
-	display: table-cell;
+	display: block;
+	margin-top: 10px;
 }
 
 #filters input[type="checkbox"]:checked + label {
