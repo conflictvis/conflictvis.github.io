@@ -193,6 +193,14 @@ div.checkbox-container {
 		vertical-align:top;
 }
 
+#filters_data input[type="checkbox"] {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
 @media print {
 	.grid-item {
 		background-color: #fff;
