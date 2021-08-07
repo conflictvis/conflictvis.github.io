@@ -120,8 +120,7 @@ h3 {
 #filters {
 	text-align: center;
 	column-count: 2;
-	overflow: hidden;
-	width: 100%;
+	display:table;
 }
 
 #filters input[type="checkbox"]:checked + label {

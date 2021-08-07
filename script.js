@@ -16,8 +16,8 @@ const taxonomy_tags = {
 					"peacebuilding", "peace_agreements"],
 	affiliated_organization: ["university", "gov", "NGO", "private", "media"],
 	geographic_focus: [
-		"global",
-		"africa",
+		"Global",
+		"Africa",
 		"Middle_East",
 	],
 	visualization_library: ["Leaflet", "Tableau", "Microsoft Power BI", "CARTO", "ESRI"]
