@@ -216,10 +216,10 @@ div.checkbox-container {
 	width: 108px;
 },
 
-#select_geographic_focus label {
-	width: 88px;
-},
-
 #select_affiliated_organization label{
 	width: 58px;
+},
+
+#select_geographic_focus label{
+	width: 88px;
 }
