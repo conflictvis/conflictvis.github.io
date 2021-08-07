@@ -33,9 +33,7 @@ const datatypes = {
 	"temporal",
 	"Dashboard",
 	"storytelling",
-	"customized",
-	"downloadable",
-	"highly_interactive"],
+	"customized"],
 	data_source: [
 		"ACLED",
 		"media",
@@ -48,6 +46,8 @@ const datatypes = {
 		"data_publicly_available",
 		"API",
 		"actively_updated",
+		"downloadable",
+		"highly_interactive"
 	]
 };
 
