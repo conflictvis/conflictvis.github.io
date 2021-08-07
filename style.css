@@ -120,7 +120,7 @@ h3 {
 #filters {
 	text-align: center;
 	column-count: 2;
-	display:table;
+	grid-column: 1;
 }
 
 #filters input[type="checkbox"]:checked + label {
