@@ -129,6 +129,12 @@ h3 {
 	column-fill: auto;
 }
 
+#filters input[type=checkbox] {
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
+}
+
 #filters input[type="checkbox"]:checked + label {
 	background-color: #cfc8c8;
 }
