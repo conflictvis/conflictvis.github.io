@@ -120,6 +120,8 @@ h3 {
 #filters {
 	text-align: center;
 	column-count: 2;
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
 	margin-top:0px;
 }
 
@@ -184,6 +186,8 @@ div.checkbox-container {
 #filters_data {
 	text-align: left;
 	column-count: 2;
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
 	margin-top:0px;
 	display:inline-block;
 }
