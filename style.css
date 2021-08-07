@@ -119,10 +119,6 @@ h3 {
 /*first filters*/
 #filters {
 	text-align: center;
-	-webkit-column-count: 2;
-	-moz-column-count: 2;
-	column-count: 2;
-	margin-top: 10px;
 }
 
 #filters input[type="checkbox"]:checked + label {
@@ -139,6 +135,7 @@ h3 {
 div.checkbox-container {
 	display: inline-block;
 	padding: 0;
+	column-count: 2;
 }
 
 /* label for the checkbox boxes */
