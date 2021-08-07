@@ -137,12 +137,6 @@ h3 {
 }
 
 /*Checkboxes*/
-div.checkbox-container {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-}
-
 /* label for the checkbox boxes */
 #filters label {
 	display: block;
