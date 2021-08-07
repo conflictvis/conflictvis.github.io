@@ -119,20 +119,11 @@ h3 {
 /*first filters*/
 #filters {
 	text-align: center;
-	width: 100%;
 	-webkit-column-count: 2;
-	-webkit-column-gap: 0;
 	-moz-column-count: 2;
-	-moz-column-gap: 0;
 	column-count: 2;
-	column-gap: 0;
-	column-fill: auto;
-}
-
-#filters input[type=checkbox] {
-  vertical-align: middle;
-  position: relative;
-  bottom: 1px;
+	display: block;
+	float: left;
 }
 
 #filters input[type="checkbox"]:checked + label {
