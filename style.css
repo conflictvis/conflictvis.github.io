@@ -120,7 +120,6 @@ h3 {
 #filters {
 	text-align: center;
 	column-count: 2;
-	grid-column: 1;
 }
 
 #filters input[type="checkbox"]:checked + label {
@@ -187,18 +186,16 @@ div.checkbox-container {
 	}
 }
 
-#select_geography_representation label,
 #select_conflict_theme label{
 	width: 58px;
 	},
-#select_theme label{
+#select_peace_theme label{
 	width: 88px;
 }
 
 #select_geographic_focus label {
 	width: 88px;
 }
-
-#select_affiliated_org label {
-	width: 88px;
+#select_affiliated_organization label{
+	width: 58px;
 }
