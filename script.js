@@ -29,13 +29,13 @@ const facets = Object.keys(taxonomy);
 const datatypes = {
 	// 3/ visualization features
 	visualization_type: ["Geovisualization",
-	"network_visualization",
-	"temporal_visualization",
-	"Dashboard_visualization",
-	"storytelling_visualization",
-	"customized_visualization",
-	"downloadable_visualization",
-	"highly_interactive_visualization"],
+	"network",
+	"temporal",
+	"Dashboard",
+	"storytelling",
+	"customized",
+	"downloadable",
+	"highly_interactive"],
 	data_source: [
 		"ACLED",
 		"media",
