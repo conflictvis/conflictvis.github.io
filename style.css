@@ -138,6 +138,17 @@ h3 {
 	text-underline-position: under;
 }
 
+#filters_data {
+	text-align: center;
+	column-count: 2;
+	margin-top:0px;
+}
+
+#filters_data h3{
+		display:inline-block;
+		vertical-align:top;
+}
+
 /*Checkboxes*/
 div.checkbox-container {
 	display: inline-block;
