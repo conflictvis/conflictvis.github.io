@@ -117,7 +117,7 @@ h3 {
 }
 
 /*first filters*/
-#filters {
+#filters li {
 	text-align: center;
 	width: 100%;
 	column-fill: balance;
@@ -127,6 +127,7 @@ h3 {
 	-moz-column-gap: 0;
 	column-count: 2;
 	column-gap: 0;
+	display:inline-block;
 }
 
 #filters input[type="checkbox"]:checked + label {
