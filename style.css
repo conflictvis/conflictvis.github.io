@@ -144,9 +144,9 @@ div.checkbox-container {
 	padding: 0;
 }
 
-
 /* label for the checkbox boxes */
 #filters label {
+	display: block;
 	line-height: 35px;
 	background-color: #fafafa;
 	color: black;
