@@ -189,16 +189,8 @@ div.checkbox-container {
 }
 
 #filters_data h3{
-		display:inline-block;
+		display:block;
 		vertical-align:top;
-}
-
-#filters_data input[type="checkbox"] {
-	position: absolute;
-	opacity: 0;
-	cursor: pointer;
-	height: 0;
-	width: 0;
 }
 
 @media print {
