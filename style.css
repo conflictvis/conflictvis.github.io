@@ -184,6 +184,7 @@ div.checkbox-container {
 	text-align: left;
 	column-count: 2;
 	margin-top:0px;
+	display:inline-block;
 }
 
 #filters_data h3{
