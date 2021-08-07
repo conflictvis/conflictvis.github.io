@@ -126,6 +126,7 @@ h3 {
 #filters h3{
 		display:inline-block;
 		vertical-align:top;
+		text-align: left;
 }
 
 #filters input[type="checkbox"]:checked + label {
