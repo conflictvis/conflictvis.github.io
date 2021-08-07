@@ -120,15 +120,13 @@ h3 {
 #filters li {
 	text-align: center;
 	width: 100%;
-	column-fill: balance;
 	-webkit-column-count: 2;
 	-webkit-column-gap: 0;
 	-moz-column-count: 2;
 	-moz-column-gap: 0;
 	column-count: 2;
 	column-gap: 0;
-	display:inline-block;
-	columns: 2;
+	column-fill: auto;
 }
 
 #filters input[type="checkbox"]:checked + label {
