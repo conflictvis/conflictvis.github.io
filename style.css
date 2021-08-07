@@ -117,7 +117,7 @@ h3 {
 }
 
 /*first filters*/
-#filters li {
+#filters {
 	text-align: center;
 	width: 100%;
 	-webkit-column-count: 2;
