@@ -123,7 +123,6 @@ h3 {
 	-moz-column-count: 2;
 	column-count: 2;
 	display: block;
-	float: left;
 }
 
 #filters input[type="checkbox"]:checked + label {
