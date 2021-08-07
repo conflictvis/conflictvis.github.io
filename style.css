@@ -188,7 +188,9 @@ div.checkbox-container {
 }
 
 #select_geography_representation label,
-#select_node_representation label,
+#conflict_theme label{
+	width: 58px;
+	},
 #select_theme label{
 	width: 88px;
 }
