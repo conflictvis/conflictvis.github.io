@@ -19,7 +19,7 @@ const taxonomy = {
 const taxonomy_tags = {
 	theme: ["Conflict Violence", "Refugee", "Conflict Tracking", "Conflict Risk",
 					"Peacebuilding", "Peace Agreements"],
-	affiliated_organization: ["university", "gov", "NGO", "private", "media"],
+	affiliated_group: ["university", "government", "NGO", "private", "media"],
 	geographic_focus: [
 		"Global",
 		"Africa",
