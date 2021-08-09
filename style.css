@@ -117,43 +117,36 @@ h3 {
 }
 
 /* image wrapping for quesiton mark */
-/* relevant styles */
-.img__wrap {
+.check {
   position: relative;
-  height: 200px;
-  width: 257px;
+  display: inline-block;
+  background-color: #5890ff;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  color: #000;
+  text-decoration: none;
 }
-
-.img__description_layer {
+.check:after {
+  content: attr(data-tooltip);
   position: absolute;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(36, 62, 206, 0.6);
-  color: #fff;
-  visibility: hidden;
+  left: 14px;
+  width: 100px;
+  background-color: #000;
+  color: #FFF;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 5px;
   opacity: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* transition effect. not necessary */
-  transition: opacity .2s, visibility .2s;
+  pointer-events: none;
+  transition: opacity .3s ease-in-out;
+  will-change: opacity;
 }
 
-.img__wrap:hover .img__description_layer {
-  visibility: visible;
+.check:hover:after {
   opacity: 1;
-}
-
-.img__description {
-  transition: .2s;
-  transform: translateY(1em);
-}
-
-.img__wrap:hover .img__description {
-  transform: translateY(0);
+  pointer-events: auto;
 }
 
 /*first filters*/
