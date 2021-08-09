@@ -7,13 +7,13 @@ const taxonomy = {
 		"Africa",
 		"Middle_East",
 	],
+	peace_theme: ["peacebuilding", "peace_agreements"],
 	data_source: [
 		"ACLED",
 		"surveys",
 		"PA-X",
 		"UCDP",
-	],
-	peace_theme: ["peacebuilding", "peace_agreements"],
+	]
 };
 
 const taxonomy_tags = {
