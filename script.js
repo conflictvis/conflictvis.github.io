@@ -5,7 +5,6 @@ const taxonomy = {
 	data_set: [
 		"Custom_Indicator",
 		"ACLED",
-		"media",
 		"surveys",
 		"PA-X",
 		"UCDP",
