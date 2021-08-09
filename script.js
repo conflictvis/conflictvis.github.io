@@ -2,7 +2,14 @@ const url = "web_vis3.csv";
 
 const taxonomy = {
 	conflict_theme: ["violence", "refugee", "tracking", "risk"],
-	affiliated_organization: ["university", "gov", "NGO", "private", "media"],
+	data_set: [
+		"ACLED",
+		"media",
+		"surveys",
+		"PA-X",
+		"UCDP",
+		"Custom_Indicator",
+	],
 	peace_theme: ["peacebuilding", "peace_agreements"],
 	geographic_focus: [
 		"Global",
@@ -28,14 +35,7 @@ const facets = Object.keys(taxonomy);
 
 const datatypes = {
 	// 3/ visualization features
-	data_source: [
-		"ACLED",
-		"media",
-		"surveys",
-		"PA-X",
-		"UCDP",
-		"Custom_Indicator",
-	],
+	affiliated_organization: ["university", "gov", "NGO", "private", "media"],
 	accessibility: [
 		"data_publicly_available",
 		"API",
