@@ -26,6 +26,11 @@
 				<!-- &#8226; -->
 				<!-- <hr /> -->
 				<h2>Select filters:</h2>
+				<div id="tooltip" display="none" style="position: absolute; display: none;"></div>
+				<svg>
+				  <rect width="100" height="50" style="fill: blue;" onmousemove="showTooltip(evt, 'This is blue');" onmouseout="hideTooltip();" >
+				  </rect>
+				</svg>
 				<span id="count"></span> / <span id="total"></span> visualizations
 				(<span href="#" id="showall">show all</span>)
 				<div id="filters"></div>
