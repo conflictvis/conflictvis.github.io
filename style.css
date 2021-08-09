@@ -336,7 +336,7 @@ margin:20px;
 }
 
 #JT_close_left{
-	background-color: #CCCCCC;
+	background-color: #988181;
 	text-align: left;
 	padding-left: 8px;
 	padding-bottom: 5px;
@@ -345,7 +345,7 @@ margin:20px;
 }
 
 #JT_close_right{
-	background-color: #CCCCCC;
+	background-color: #988181;
 	text-align: left;
 	padding-left: 8px;
 	padding-bottom: 5px;
@@ -359,7 +359,7 @@ margin:3px 0;
 
 #JT_copy img{
 	padding: 1px;
-	border: 1px solid #CCCCCC;
+	border: 1px solid #988181;
 }
 
 .jTip{
