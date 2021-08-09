@@ -3,7 +3,6 @@ const url = "web_vis3.csv";
 const taxonomy = {
 	conflict_theme: ["violence", "refugee", "tracking", "risk"],
 	data_set: [
-		"Custom_Indicator",
 		"ACLED",
 		"surveys",
 		"PA-X",
