@@ -2,6 +2,11 @@ const url = "web_vis3.csv";
 
 const taxonomy = {
 	conflict_theme: ["violence", "refugee", "tracking", "risk"],
+	geographic_focus: [
+		"Global",
+		"Africa",
+		"Middle_East",
+	],
 	data_source: [
 		"ACLED",
 		"surveys",
@@ -9,11 +14,6 @@ const taxonomy = {
 		"UCDP",
 	],
 	peace_theme: ["peacebuilding", "peace_agreements"],
-	geographic_focus: [
-		"Global",
-		"Africa",
-		"Middle_East",
-	],
 };
 
 const taxonomy_tags = {
