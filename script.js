@@ -303,7 +303,3 @@ function sentenceCase(str) {
 	}
 	return str;
 }
-
-(function () {
-  $('[data-toggle="tooltip"]').tooltip();
-}());
