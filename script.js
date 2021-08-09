@@ -38,8 +38,8 @@ const datatypes = {
 		"data_publicly_available",
 		"API",
 		"actively_updated",
-		"highly_interactive",
-		"downloadable"
+		"downloadable",
+		"highly_interactive"
 	],
 	visualization_type: [
 	"network",
