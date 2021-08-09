@@ -149,6 +149,13 @@ h3 {
   pointer-events: auto;
 }
 
+.tooltip-div {
+  background-color: #F00;
+  width: 100px;
+  height: 100px;
+}
+
+
 /*first filters*/
 #filters {
 	text-align: center;
