@@ -117,10 +117,10 @@ h3 {
 }
 
 #tooltip {
-  background: cornsilk;
+  background: white;
   border: 1px solid black;
-  border-radius: 5px;
-  padding: 5px;
+  border-radius: 1px;
+  padding: 1px;
 }
 
 /*first filters*/
