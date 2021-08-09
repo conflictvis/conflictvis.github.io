@@ -258,6 +258,23 @@ div.checkbox-container {
 	width: 58px;
 }
 
+/* added in tooltip report */
+
+.formInfo a, .formInfo a:active, formInfo a:visited{
+	background-color:#FF0000;
+	font-size: 1.3em;
+	font-weight:bold;
+	padding:1px 2px;
+	margin-left:5px;
+	color:#FFFFFF;
+	text-decoration: none;
+}
+
+.formInfo a:hover{
+	color:#660000;
+	text-decoration: none;
+}
+
 /* ---------->>> jtip <<<---------------------------------------------------------------*/
 
 #JT_arrow_left{
