@@ -262,7 +262,6 @@ div.checkbox-container {
 /* ----- add selectors here for font sizing ----- */
 #JT_close_left, #JT_close_right{font-size: 1.1em;}
 #JT_copy p, #JT_copy ul{font-size: 1.1em;}
-p, label{font-size: 1.2em;}
 
 /* ----- base links ----- */
 a:link {color: #CC6633;}
@@ -271,15 +270,13 @@ a:hover {color: #999966;}
 a:active {color: #CC6633;}
 a:focus{color: #CC6633;}
 
-p {line-height:1.4em;margin:10px 0;}
-hr{margin:10px 0;color:#999999;}
 
 #contentPad{
 margin:20px;
 }
 
 .formInfo a, .formInfo a:active, formInfo a:visited{
-	background-color:#FF0000;
+	background-color:#403434;
 	font-size: 1.3em;
 	font-weight:bold;
 	padding:1px 2px;
