@@ -209,17 +209,17 @@ div.checkbox-container {
 	}
 }
 
-#select_conflict_theme label{
-	width: 58px;
-},
-
 #select_peace_theme label{
 	width: 108px;
-},
+}
+
+#select_conflict_theme label{
+	width: 58px;
+}
 
 #select_data_set label{
 	width: 58px;
-},
+}
 
 #select_geographic_focus label{
 	width: 88px;
