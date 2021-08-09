@@ -33,7 +33,7 @@ const facets = Object.keys(taxonomy);
 
 const datatypes = {
 	// 3/ visualization features
-	affiliated_organization: ["university", "gov", "NGO", "private", "media"],
+	affiliated_organization: ["university", "government", "NGO", "private", "media"],
 	accessibility: [
 		"data_publicly_available",
 		"API",
