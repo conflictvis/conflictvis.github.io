@@ -33,7 +33,7 @@ const facets = Object.keys(taxonomy);
 
 const datatypes = {
 	// 3/ visualization features
-	affiliated_group: ["university", "NGO", "private", "media", "government",],
+	affiliated_group: ["university", "NGO", "private", "media", "government"],
 	accessibility: [
 		"data_publicly_available",
 		"API",
@@ -44,7 +44,7 @@ const datatypes = {
 	visualization_type: [
 	"network",
 	"temporal",
-	"Dashboard",
+	"dashboard",
 	"storytelling",
 	"customized",
 	"Geovisualization"],
