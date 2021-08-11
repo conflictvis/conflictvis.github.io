@@ -24,6 +24,7 @@ const taxonomy_tags = {
 		"Global",
 		"Africa",
 		"Middle_East",
+		"asia"
 	],
 	visualization_library: ["Leaflet", "Tableau", "Microsoft Power BI", "CARTO", "ESRI"]
 };
