@@ -38,7 +38,7 @@ const datatypes = {
 		"data_publicly_available",
 		"API",
 		"actively_updated",
-		"downloadable",
+		"downloadable_image",
 		"highly_interactive"
 	],
 	visualization_type: [
