@@ -6,6 +6,7 @@ const taxonomy = {
 		"Global",
 		"Africa",
 		"Middle_East",
+		"Asia",
 	],
 	peace_theme: ["peacebuilding", "peace_agreements"],
 	data_source: [
@@ -24,7 +25,7 @@ const taxonomy_tags = {
 		"Global",
 		"Africa",
 		"Middle_East",
-		"asia"
+		"Asia"
 	],
 	visualization_library: ["Leaflet", "Tableau", "Microsoft Power BI", "CARTO", "ESRI"]
 };
