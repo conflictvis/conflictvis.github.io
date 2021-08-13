@@ -260,6 +260,7 @@ function filterData(d, filters, dataFilters) {
 			// selected: fil[1]
 
 			// d[fil2[1]] --> data ['network'] == yes
+			console.log("Data filter: ")
 			console.log(fil2[1])
 			return fil2[1].length == 0 || d[fil2[1]] == "yes";
 		})
