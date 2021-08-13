@@ -259,8 +259,8 @@ function filterData(d, filters, dataFilters) {
 			// facet: fil[0]
 			// selected: fil[1]
 
-			// currently fil2[1].indexOf(d[fil2[0]]) for filter 2 is all 0
-			// need filter 2 to show 0 if value exists
+			// d[fil2[1]] --> data ['network'] == yes
+			console.log(fil2[1])
 			return fil2[1].length == 0 || d[fil2[1]] == "yes";
 		})
 		//dataFilters.every(function (fil) {
