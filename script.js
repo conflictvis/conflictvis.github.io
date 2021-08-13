@@ -260,10 +260,20 @@ function filterData(d, filters, dataFilters) {
 			// selected: fil[1]
 
 			// d[fil2[1]] --> data ['network'] == yes
-			fil2[1].every(function(filter_more))
-				console.log("Data filter: ")
-				console.log(filter_more) // ["temporal", "dashboard"]
-				return filter_more.length == 0 || d[filter_more] == "yes";
+			// fil2.every
+			console.log("Data filter: ")
+			console.log(fil2[1]) // ["temporal", "dashboard"]
+			console.log("Another tryL")
+			// if length is 1 do this
+			console.log(fil2[1][1])
+			//if length is 2 do this:
+			if length(fil2[1] == 2){
+				// return d[fil2[1][1]] == "yes" && d[fil2[1][2]] == "yes"
+			}
+			if length(fil2[1] == 3){
+				// return d[fil2[1][1]] == "yes" && d[fil2[1][2]] == "yes" &&  && d[fil2[1][3]] == "yes"
+			}
+			return fil2[1].length == 0 || d[fil2[1]] == "yes";
 		})
 		//dataFilters.every(function (fil) {
 		//	return d[fil] == "yes";
