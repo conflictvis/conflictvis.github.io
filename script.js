@@ -265,7 +265,7 @@ function filterData(d, filters, dataFilters) {
 			// if length is 1 do this
 			console.log(fil2[1][0])
 			//if length is 2 do this:
-			if (length(fil2[1]) == 2){
+			if (fil2[1].length == 2){
 				 return d[fil2[1][0]] == "yes" && d[fil2[1][1]] == "yes"
 			}
 			//if length(fil2[1] == 3){
