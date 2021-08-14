@@ -261,7 +261,7 @@ function filterData(d, filters, dataFilters) {
 
 			// d[fil2[1]] --> data ['network'] == yes
 			// fil2.every
-			console.log("Another try")
+			console.log("Another try: ")
 			// if length is 1 do this
 			console.log(fil2[1][0])
 			//if length is 2 do this:
