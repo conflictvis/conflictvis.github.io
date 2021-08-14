@@ -267,12 +267,12 @@ function filterData(d, filters, dataFilters) {
 			// if length is 1 do this
 			console.log(fil2[1][1])
 			//if length is 2 do this:
-			if length(fil2[1] == 2){
+			//if length(fil2[1] == 2){
 				// return d[fil2[1][1]] == "yes" && d[fil2[1][2]] == "yes"
-			}
-			if length(fil2[1] == 3){
+			//}
+			//if length(fil2[1] == 3){
 				// return d[fil2[1][1]] == "yes" && d[fil2[1][2]] == "yes" &&  && d[fil2[1][3]] == "yes"
-			}
+			//}
 			return fil2[1].length == 0 || d[fil2[1]] == "yes";
 		})
 		//dataFilters.every(function (fil) {
