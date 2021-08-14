@@ -266,6 +266,9 @@ function filterData(d, filters, dataFilters) {
 			if (fil2[1].length == 3){
 				 return d[fil2[1][0]] == "yes" && d[fil2[1][1]] == "yes" && d[fil2[1][2]] == "yes"
 			}
+			if (fil2[1].length == 4){
+				 return d[fil2[1][0]] == "yes" && d[fil2[1][1]] == "yes" && d[fil2[1][2]] == "yes" && d[fil2[1][3]] == "yes"
+			}
 			return fil2[1].length == 0 || d[fil2[1]] == "yes";
 		})
 		//dataFilters.every(function (fil) {
