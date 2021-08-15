@@ -156,6 +156,7 @@ h3 {
 	-moz-column-count: 2;
 	-webkit-column-count: 2;
 	margin-top:0px;
+	background-color: lightblue;
 }
 
 #filters h3{
@@ -222,6 +223,7 @@ div.checkbox-container {
 	margin-top:0px;
 	display:flex;
 	justify-content:space-between;
+	background-color: purple;
 }
 
 #filters_data h3{
