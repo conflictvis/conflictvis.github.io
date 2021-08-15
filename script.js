@@ -35,21 +35,21 @@ const facets = Object.keys(taxonomy);
 
 const datatypes = {
 	// 3/ visualization features
-	affiliated_group: ["university", "NGO", "private", "media", "government"],
+	affiliated_group: ["university", "NGO", "private", "media", "govern-ment"],
 	accessibility: [
 		"data_publicly_available",
 		"API",
-		"actively_updated",
-		"downloadable_image",
-		"highly_interactive"
+		"updated",
+		"downloadable",
+		"interactive"
 	],
 	visualization_type: [
 	"network",
 	"temporal",
+	"Geospatial",
 	"dashboard",
 	"storytelling",
-	"customized",
-	"Geovisualization"],
+	"customized"],
 };
 
 const facets2 = Object.keys(datatypes);
