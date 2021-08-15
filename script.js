@@ -46,7 +46,7 @@ const datatypes = {
 	accessibility: [
 		"API",
 		"updated",
-		"downloadable",
+		"save_image",
 		"interactive",
 		"data_available"
 	]
