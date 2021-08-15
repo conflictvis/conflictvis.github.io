@@ -37,7 +37,7 @@ const datatypes = {
 	// 3/ visualization features
 	affiliated_group: ["university", "NGO", "private", "media", "govern-ment"],
 	accessibility: [
-		"data_publicly_available",
+		"data_available",
 		"API",
 		"updated",
 		"downloadable",
