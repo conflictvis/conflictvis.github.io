@@ -36,13 +36,6 @@ const facets = Object.keys(taxonomy);
 const datatypes = {
 	// 3/ visualization features
 	affiliated_group: ["university", "NGO", "private", "media", "govern-ment"],
-	accessibility: [
-		"data_available",
-		"API",
-		"updated",
-		"downloadable",
-		"interactive"
-	],
 	visualization_type: [
 	"network",
 	"temporal",
@@ -50,6 +43,13 @@ const datatypes = {
 	"dashboard",
 	"storytelling",
 	"customized"],
+	accessibility: [
+		"data_available",
+		"API",
+		"updated",
+		"downloadable",
+		"interactive"
+	]
 };
 
 const facets2 = Object.keys(datatypes);
