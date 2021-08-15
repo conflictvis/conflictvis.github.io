@@ -156,7 +156,7 @@ h3 {
 	-moz-column-count: 2;
 	-webkit-column-count: 2;
 	margin-top:0px;
-	background-color: #4d4d4d;
+	background-color: rgba(0, 0, 0, 0.4);;
 }
 
 #filters h3{
