@@ -1,5 +1,12 @@
+/*
+ * Gallery website by Sarah Olson,
+ * inspired by Schöttler, Sarah / based from template
+ * of https://geonetworks.github.io.
+ */
+
 const url = "web_vis3.csv";
 
+//used for the subject matter filters
 const taxonomy = {
 	conflict_theme: ["violence", "refugee", "tracking", "risk"],
 	geographic_focus: [
@@ -17,6 +24,7 @@ const taxonomy = {
 	]
 };
 
+//used for the subject matter filters to display on the gallery as tags
 const taxonomy_tags = {
 	theme: ["Conflict Violence", "Refugee", "Conflict Tracking", "Conflict Risk",
 					"Peacebuilding", "Peace Agreements"],
@@ -30,9 +38,9 @@ const taxonomy_tags = {
 	visualization_library: ["Leaflet", "Tableau", "Microsoft Power BI", "CARTO", "ESRI"]
 };
 const tags_facets = Object.keys(taxonomy_tags);
-
 const facets = Object.keys(taxonomy);
 
+	// visualization features and data types (geospatial, temporal, etc.)
 const datatypes = {
 	// 3/ visualization features
 	affiliated_group: ["university", "NGO", "private", "media", "government"],
@@ -53,8 +61,6 @@ const datatypes = {
 };
 
 const facets2 = Object.keys(datatypes);
-
-
 const container = d3.select(".grid");
 
 // add in mouseover help buttons
@@ -77,7 +83,6 @@ var filters = d3
 
 filters
 	.append("h3")
-	// .html(d => '<div class="legend_circle ' + d + '"></div>' + formatText(d));
 	.html((d) => formatText(d));
 
 var checkboxes = filters
@@ -106,7 +111,7 @@ checkboxes
 	.append("span")
 	.text((d) => formatText(d));
 
-//checkbox portion
+// bottom section: visible checkboxs with data types/visualization features
 var dataFilters = d3
 		.select("#filters_data")
 		.selectAll("div")
@@ -149,14 +154,12 @@ checkData
 
 d3.csv(url)
 	.then(function (data) {
-		console.log(data);
-
-		// display count
+		// display total count of the visualizations count
 		d3.selectAll("#count, #total").text(data.length);
 
-		// listen for changes in filters
+		// listen for any changes in filters
 		d3.selectAll(".input").on("change", function () {
-			// get filter values for the boxes
+			// get the filter values for the first part (subject matter)
 			var filters = facets.map(function (facet) {
 				var cats = [];
 				taxonomy[facet].forEach(function (cat) {
@@ -170,7 +173,7 @@ d3.csv(url)
 				});
 				return [facet, cats];
 			});
-			//get filters for the check boxes
+			//get filters for the check boxes (visualization features)
 			var dataFilters = facets2.map(function (facet2) {
 				var cats2 = [];
 				datatypes[facet2].forEach(function (cat2) {
@@ -189,21 +192,21 @@ d3.csv(url)
 		});
 
 		function refreshTechniques(filters, dataFilters) {
-			// filter
+			// filter (get the filtered data)
 			var fData = data.filter((d) => filterData(d, filters, dataFilters));
 			// update count in heading
 			d3.select("#count").text(fData.length);
-			// get IDs of techniques matching filter
+			// get the IDs of associated techniques
 			var ids = fData.map((d) => d.image);
 			// hide all non-matching ones
 			d3.selectAll(".grid-item").style("display", (d) =>
 				ids.indexOf(d.image) != -1 ? null : "none"
 			);
-			// update layout
+			// update the layout
 			msnry.layout();
 		}
 
-		// draw boxes for papers
+		// draw boxes for the visualizations
 		var div = container
 			.selectAll("div")
 			.data(data)
@@ -277,11 +280,20 @@ function filterData(d, filters, dataFilters) {
 	);
 }
 
-function unique(arr, acc) {
-	return arr.map(acc).filter(function (value, index, self) {
-		return self.indexOf(value) === index;
-	});
+function sentenceCase(str) {
+	// capitalise first word and replace underscores by spaces
+	// replace first letter
+	str = str.slice(0, 1).toUpperCase() + str.slice(1);
+	// find all underscores, replace by spaces and capitalise following letter
+	while (str.indexOf("_") != -1) {
+		str =
+			str.slice(0, str.indexOf("_")) +
+			" " +
+			str.slice(str.indexOf("_") + 1);
+	}
+	return str;
 }
+
 
 function formatText(str) {
 	// capitalise and replace underscores by spaces
@@ -300,16 +312,9 @@ function formatText(str) {
 	return str;
 }
 
-function sentenceCase(str) {
-	// capitalise first word and replace underscores by spaces
-	// replace first letter
-	str = str.slice(0, 1).toUpperCase() + str.slice(1);
-	// find all underscores, replace by spaces and capitalise following letter
-	while (str.indexOf("_") != -1) {
-		str =
-			str.slice(0, str.indexOf("_")) +
-			" " +
-			str.slice(str.indexOf("_") + 1);
-	}
-	return str;
+
+function unique(arr, acc) {
+	return arr.map(acc).filter(function (value, index, self) {
+		return self.indexOf(value) === index;
+	});
 }
